@@ -1,0 +1,11 @@
+{
+	"auth": {
+		"signIn": "SignIn",
+		"signUp": "SignUp",
+		"name": "name",
+		"email": "email",
+		"password": "password",
+		"passwordConfirm": "password confirmation",
+		"buttonName": "Submit"
+	}
+}
