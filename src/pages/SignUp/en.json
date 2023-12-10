@@ -1,11 +1,16 @@
 {
 	"auth": {
-		"signIn": "SignIn",
-		"signUp": "SignUp",
+		"signIn": "Welcome back to GraphQL Proxy!",
+		"signUp": "New User Registration",
 		"name": "name",
 		"email": "email",
 		"password": "password",
 		"passwordConfirm": "password confirmation",
-		"buttonName": "Submit"
+		"buttonName": "Submit",
+		"googleButton": "Continue with Google",
+		"dontHaveAccount": "Don't have account?",
+		"haveAccount": "Already have an account?",
+		"signInLink": "SignIn",
+		"signUpLink": "SignUp"
 	}
 }

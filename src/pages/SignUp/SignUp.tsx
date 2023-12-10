@@ -2,8 +2,19 @@ import { Button, Grid, List, ListItem, Paper } from '@mui/material';
 import { FormikProps, useFormik } from 'formik';
 import FormInput, { Values } from '../../components/FormInput/FormInput';
 import i18n from './ru.json';
+import { useFirebaseAuth } from '../../services/auth/firebase';
+import { Link } from 'react-router-dom';
+import GoogleButton from '../../components/GoogleButton/GoogleButton';
 
 const SignUp = () => {
+  const {
+    user,
+    loading,
+    error,
+    registerWithEmailAndPassword,
+    signInWithGoogle,
+  } = useFirebaseAuth();
+  console.log(user, loading, error);
   const formik: FormikProps<Values> = useFormik({
     initialValues: {
       name: '',
@@ -12,6 +23,7 @@ const SignUp = () => {
       passwordConfirm: '',
     },
     onSubmit: (values) => {
+      registerWithEmailAndPassword(values.name, values.email, values.password);
       alert(JSON.stringify(values, null, 2));
     },
   });
@@ -38,7 +50,11 @@ const SignUp = () => {
           margin: 'auto',
         }}
       >
-        <h1>{i18n.auth.signUp}</h1>
+        <h2>{i18n.auth.signUp}</h2>
+        <GoogleButton
+          googleButtonName={i18n.auth.googleButton}
+          signInWithGoogleHandler={signInWithGoogle}
+        />
         <form onSubmit={formik.handleSubmit}>
           <List
             sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
@@ -77,6 +93,10 @@ const SignUp = () => {
             </ListItem>
             <ListItem>
               <Button type="submit">{i18n.auth.buttonName}</Button>
+            </ListItem>
+            <ListItem>
+              <Grid sx={{ marginRight: '1rem' }}>{i18n.auth.haveAccount}</Grid>
+              <Link to={'/'}>{i18n.auth.signInLink}</Link>
             </ListItem>
           </List>
         </form>
