@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component becomes sticky on scroll 1`] = `
+<div
+  class="MuiGrid-root MuiGrid-container sc-bdfCDU jXCgSJ css-11lq3yg-MuiGrid-root"
+>
+  <div
+    class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
+  >
+    <a
+      class="sc-gsTDqH kvzBLD"
+      href="/"
+    >
+      Welcome page
+    </a>
+  </div>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-6 css-1wdn4sc-MuiGrid-root"
+  >
+    <a
+      class="sc-gsTDqH jRXCme"
+      href="/signIn"
+    >
+      Sign In
+    </a>
+    <a
+      class="sc-gsTDqH jRXCme"
+      href="/signOut"
+    >
+      Sign Out
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Header component renders correctly and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root MuiGrid-container sc-bdfCDU hnKZYj css-11lq3yg-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
+    >
+      <a
+        class="sc-gsTDqH kvzBLD"
+        href="/"
+      >
+        Welcome page
+      </a>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-6 css-1wdn4sc-MuiGrid-root"
+    >
+      <a
+        class="sc-gsTDqH jRXCme"
+        href="/signIn"
+      >
+        Sign In
+      </a>
+      <a
+        class="sc-gsTDqH jRXCme"
+        href="/signOut"
+      >
+        Sign Out
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
