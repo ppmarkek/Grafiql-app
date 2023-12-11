@@ -4,24 +4,32 @@ import { ButtonsContainer } from './style';
 
 interface Props {
   isAuthorized?: boolean;
+  signInButtonText?: string;
+  signUpButtonText?: string;
+  mainPageButtonText?: string;
 }
 
-export default function AuthButtons({ isAuthorized }: Props) {
+export default function AuthButtons({
+  isAuthorized,
+  signInButtonText,
+  signUpButtonText,
+  mainPageButtonText,
+}: Props) {
   return (
     <ButtonsContainer>
       {isAuthorized ? (
         <>
           <Link to="/main">
-            <PrimaryButton>Main Page</PrimaryButton>
+            <PrimaryButton>{mainPageButtonText}</PrimaryButton>
           </Link>
         </>
       ) : (
         <>
           <Link to="/signin">
-            <PrimaryButton>Sign In</PrimaryButton>
+            <PrimaryButton>{signInButtonText}</PrimaryButton>
           </Link>
           <Link to="/signup">
-            <PrimaryButton>Sign Up</PrimaryButton>
+            <PrimaryButton>{signUpButtonText}</PrimaryButton>
           </Link>
         </>
       )}
