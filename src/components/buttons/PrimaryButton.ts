@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const PrimaryButton = styled.button`
+  border: none;
+  outline: none;
   border-radius: 1.5rem;
   padding: 1.5rem 2rem;
   font-weight: 600;
