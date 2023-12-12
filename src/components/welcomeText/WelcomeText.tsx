@@ -1,4 +1,4 @@
-import { Heading, Paragraph } from './style';
+import { Container, Heading, Paragraph } from './style';
 
 interface Props {
   welcomeText?: string;
@@ -14,11 +14,11 @@ export default function WelcomeText({
   courseText,
 }: Props) {
   return (
-    <div>
+    <Container>
       <Heading>{welcomeText}</Heading>
       <Paragraph>{projectText}</Paragraph>
       <Paragraph>{developersText}</Paragraph>
       <Paragraph>{courseText}</Paragraph>
-    </div>
+    </Container>
   );
 }
