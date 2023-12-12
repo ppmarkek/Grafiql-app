@@ -2,13 +2,13 @@
 
 exports[`Header component becomes sticky on scroll 1`] = `
 <div
-  class="MuiGrid-root MuiGrid-container sc-bdfCDU jXCgSJ css-11lq3yg-MuiGrid-root"
+  class="MuiGrid-root MuiGrid-container css-1tvgrjt-MuiGrid-root"
 >
   <div
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
   >
     <a
-      class="sc-gsTDqH kvzBLD"
+      class="css-1avdwde"
       href="/"
     >
       Welcome page
@@ -18,13 +18,7 @@ exports[`Header component becomes sticky on scroll 1`] = `
     class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-6 css-1wdn4sc-MuiGrid-root"
   >
     <a
-      class="sc-gsTDqH jRXCme"
-      href="/signIn"
-    >
-      Sign In
-    </a>
-    <a
-      class="sc-gsTDqH jRXCme"
+      class="css-vmh4zg"
       href="/signOut"
     >
       Sign Out
@@ -36,13 +30,13 @@ exports[`Header component becomes sticky on scroll 1`] = `
 exports[`Header component renders correctly and matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid-root MuiGrid-container sc-bdfCDU hnKZYj css-11lq3yg-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-cczecm-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
     >
       <a
-        class="sc-gsTDqH kvzBLD"
+        class="css-1avdwde"
         href="/"
       >
         Welcome page
@@ -52,13 +46,7 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
       class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-6 css-1wdn4sc-MuiGrid-root"
     >
       <a
-        class="sc-gsTDqH jRXCme"
-        href="/signIn"
-      >
-        Sign In
-      </a>
-      <a
-        class="sc-gsTDqH jRXCme"
+        class="css-vmh4zg"
         href="/signOut"
       >
         Sign Out

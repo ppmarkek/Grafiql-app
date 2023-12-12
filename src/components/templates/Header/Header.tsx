@@ -27,9 +27,6 @@ const Header = () => {
       </Grid>
 
       <Grid container item xs={6} justifyContent={'flex-end'} gap={'20px'}>
-        <StyledLink $width={'100px'} to={'/signIn'}>
-          Sign In
-        </StyledLink>
         <StyledLink $width={'100px'} to={'/signOut'}>
           Sign Out
         </StyledLink>
