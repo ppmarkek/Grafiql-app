@@ -1,27 +1,33 @@
-import { FooterContainer } from '../../styles/commonStyles';
+import {
+  FooterContainer,
+  FooterContent,
+  FooterSection,
+  FooterLink,
+  FooterLogo,
+} from '../../styles/commonStyles';
 
 export default function Footer() {
   return (
     <FooterContainer>
-      <div>
-        <div>
+      <FooterContent>
+        <FooterSection>
           <h3>Authors&apos; GitHub</h3>
           <div>
-            <a href="" target="_blank"></a>
-            <a href="" target="_blank"></a>
-            <a href="" target="_blank"></a>
+            <FooterLink href="" target="_blank"></FooterLink>
+            <FooterLink href="" target="_blank"></FooterLink>
+            <FooterLink href="" target="_blank"></FooterLink>
           </div>
-        </div>
-        <div>
+        </FooterSection>
+        <FooterSection>
           <h3>Year of Creation</h3>
           <span>2023</span>
-        </div>
-        <div>
-          <a>
-            <img />
-          </a>
-        </div>
-      </div>
+        </FooterSection>
+        <FooterSection>
+          <FooterLink>
+            <FooterLogo />
+          </FooterLink>
+        </FooterSection>
+      </FooterContent>
     </FooterContainer>
   );
 }
