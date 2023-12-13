@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { StyledFormControl, StyledLink, Wrapper } from './style';
 import {
   Grid,
@@ -7,10 +7,11 @@ import {
   Select,
   SelectChangeEvent,
 } from '@mui/material';
+import { LenguageContext } from '../../Context/LenguageContext';
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
-  const [language, setLanguage] = useState('');
+  const { language, setLanguage } = useContext(LenguageContext);
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -47,8 +48,8 @@ const Header = () => {
             label="Language"
             onChange={handleChange}
           >
-            <MenuItem value={10}>Russian</MenuItem>
-            <MenuItem value={20}>English</MenuItem>
+            <MenuItem value={'Russian'}>Russian</MenuItem>
+            <MenuItem value={'English'}>English</MenuItem>
           </Select>
         </StyledFormControl>
         <StyledLink $width={'100px'} to={'/signOut'}>
