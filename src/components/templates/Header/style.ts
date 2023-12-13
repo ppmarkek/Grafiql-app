@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { FormControl, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/system';
 
@@ -37,3 +37,11 @@ export const StyledLink = styled(Link)(({ $width }: LinkStyleProps) => ({
       '0 -10px 25px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1)',
   },
 }));
+
+export const StyledFormControl = styled(FormControl)({
+  width: '130px',
+
+  fieldset: {
+    border: '1px solid #444',
+  },
+});
