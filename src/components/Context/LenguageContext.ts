@@ -7,7 +7,7 @@ interface LenguageContextType {
 
 export const initialState = {
   language: '',
-  setLanguage: () => {},
+  setLanguage: (() => {}) as Dispatch<SetStateAction<string>>,
 };
 
 export const LenguageContext = createContext<LenguageContextType>(initialState);
