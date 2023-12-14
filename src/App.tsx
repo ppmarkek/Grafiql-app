@@ -3,7 +3,7 @@ import Header from './components/templates/Header/Header';
 import { LanguageContext, Langs } from './components/Context/LenguageContext';
 
 function App() {
-  const [language, setLanguage] = useState<Langs>(Langs.English);
+  const [language, setLanguage] = useState<Langs>(Langs.en);
 
   console.log(language);
 

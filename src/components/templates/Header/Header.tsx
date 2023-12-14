@@ -48,8 +48,8 @@ const Header = () => {
             label="Language"
             onChange={handleChange}
           >
-            <MenuItem value={Langs.Russian}>Russian</MenuItem>
-            <MenuItem value={Langs.English}>English</MenuItem>
+            <MenuItem value={Langs.ru}>RU</MenuItem>
+            <MenuItem value={Langs.en}>EN</MenuItem>
           </Select>
         </StyledFormControl>
         <StyledLink width="100px" to={'/signOut'}>

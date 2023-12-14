@@ -15,7 +15,7 @@ const TestComponent = () => {
   return (
     <div>
       <span data-testid="language-value">{language}</span>
-      <button onClick={() => setLanguage(Langs.English)}>Set to English</button>
+      <button onClick={() => setLanguage(Langs.en)}>Set to English</button>
     </div>
   );
 };
@@ -25,7 +25,7 @@ interface TestWrapperProps {
 }
 
 const TestWrapper: React.FC<TestWrapperProps> = ({ children }) => {
-  const [language, setLang] = useState<Langs>(Langs.English);
+  const [language, setLang] = useState<Langs>(Langs.en);
 
   const setLanguage: Dispatch<SetStateAction<Langs>> = (
     lang: SetStateAction<Langs>
@@ -55,20 +55,20 @@ describe('LanguageContext', () => {
 
     await waitFor(() => {
       const languageValue = screen.getByTestId('language-value');
-      expect(languageValue.textContent).toBe(Langs.English);
+      expect(languageValue.textContent).toBe(Langs.en);
     });
   });
 
   describe('setLanguage function', () => {
     it('should update the language', () => {
-      let language: Langs = Langs.Russian;
+      let language: Langs = Langs.ru;
       const setLanguage = (newLanguage: Langs) => {
         language = newLanguage;
       };
 
-      setLanguage(Langs.English);
+      setLanguage(Langs.en);
 
-      expect(language).toBe(Langs.English);
+      expect(language).toBe(Langs.en);
     });
   });
 
@@ -77,7 +77,7 @@ describe('LanguageContext', () => {
       const { setLanguage } = initialState;
       expect(setLanguage).toBeDefined();
       expect(() => {
-        setLanguage(Langs.English);
+        setLanguage(Langs.en);
       }).not.toThrow();
     });
   });

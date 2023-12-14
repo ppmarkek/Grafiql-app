@@ -1,8 +1,8 @@
 import { Dispatch, SetStateAction, createContext } from 'react';
 
 export enum Langs {
-  English = 'en',
-  Russian = 'ru',
+  en = 'en',
+  ru = 'ru',
 }
 
 interface LenguageContextType {
@@ -11,7 +11,7 @@ interface LenguageContextType {
 }
 
 export const initialState: LenguageContextType = {
-  language: Langs.English,
+  language: Langs.en,
   setLanguage: (() => {}) as Dispatch<SetStateAction<Langs>>,
 };
 
