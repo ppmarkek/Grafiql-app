@@ -7,11 +7,11 @@ import {
   Select,
   SelectChangeEvent,
 } from '@mui/material';
-import { LenguageContext } from '../../Context/LenguageContext';
+import { LanguageContext, Langs } from '../../Context/LenguageContext';
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
-  const { language, setLanguage } = useContext(LenguageContext);
+  const { language, setLanguage } = useContext(LanguageContext);
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   const handleChange = (event: SelectChangeEvent) => {
-    setLanguage(event.target.value as string);
+    setLanguage(event.target.value as Langs);
   };
 
   useEffect(() => {
@@ -31,9 +31,9 @@ const Header = () => {
   }, []);
 
   return (
-    <Wrapper container $isSticky={isSticky}>
+    <Wrapper container isSticky={isSticky}>
       <Grid item xs={6}>
-        <StyledLink $width={'150px'} to={'/'}>
+        <StyledLink width="150px" to={'/'}>
           Welcome page
         </StyledLink>
       </Grid>
@@ -48,11 +48,11 @@ const Header = () => {
             label="Language"
             onChange={handleChange}
           >
-            <MenuItem value={'Russian'}>Russian</MenuItem>
-            <MenuItem value={'English'}>English</MenuItem>
+            <MenuItem value={Langs.Russian}>Russian</MenuItem>
+            <MenuItem value={Langs.English}>English</MenuItem>
           </Select>
         </StyledFormControl>
-        <StyledLink $width={'100px'} to={'/signOut'}>
+        <StyledLink width="100px" to={'/signOut'}>
           Sign Out
         </StyledLink>
       </Grid>

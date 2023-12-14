@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import Header from './components/templates/Header/Header';
-import { LenguageContext } from './components/Context/LenguageContext';
+import { LanguageContext, Langs } from './components/Context/LenguageContext';
 
 function App() {
-  const [language, setLanguage] = useState('');
+  const [language, setLanguage] = useState<Langs>(Langs.English);
+
+  console.log(language);
 
   return (
-    <LenguageContext.Provider value={{ language, setLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
       <Header />
-    </LenguageContext.Provider>
+    </LanguageContext.Provider>
   );
 }
 

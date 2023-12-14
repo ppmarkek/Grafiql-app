@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom';
 import { styled } from '@mui/system';
 
 type LinkStyleProps = {
-  $width?: string;
-  $isSticky?: boolean;
+  width?: string;
+  isSticky?: boolean;
 };
 
-export const Wrapper = styled(Grid)(({ $isSticky }: LinkStyleProps) => ({
-  height: $isSticky ? '80px' : '90px',
-  backgroundColor: $isSticky ? '#f0f0f0' : 'transparent',
+export const Wrapper = styled(Grid)(({ isSticky }: LinkStyleProps) => ({
+  height: isSticky ? '80px' : '90px',
+  backgroundColor: isSticky ? '#f0f0f0' : 'transparent',
   justifyContent: 'space-between',
   alignItems: 'center',
   padding: '0px 50px',
@@ -19,11 +19,11 @@ export const Wrapper = styled(Grid)(({ $isSticky }: LinkStyleProps) => ({
   transition: 'all 0.5s ease-in-out',
 }));
 
-export const StyledLink = styled(Link)(({ $width }: LinkStyleProps) => ({
+export const StyledLink = styled(Link)(({ width }: LinkStyleProps) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  width: $width || 'auto',
+  width: width || 'auto',
   textDecoration: 'none',
   color: '#000',
   fontWeight: '700',

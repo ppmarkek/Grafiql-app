@@ -7,15 +7,15 @@ import React, {
 } from 'react';
 import { render, screen, act, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { LenguageContext, initialState } from '../LenguageContext';
+import { LanguageContext, Langs, initialState } from '../LenguageContext';
 
 const TestComponent = () => {
-  const { language, setLanguage } = useContext(LenguageContext);
+  const { language, setLanguage } = useContext(LanguageContext);
 
   return (
     <div>
       <span data-testid="language-value">{language}</span>
-      <button onClick={() => setLanguage('English')}>Set to English</button>
+      <button onClick={() => setLanguage(Langs.English)}>Set to English</button>
     </div>
   );
 };
@@ -25,22 +25,22 @@ interface TestWrapperProps {
 }
 
 const TestWrapper: React.FC<TestWrapperProps> = ({ children }) => {
-  const [language, setLang] = useState('');
+  const [language, setLang] = useState<Langs>(Langs.English);
 
-  const setLanguage: Dispatch<SetStateAction<string>> = (
-    lang: SetStateAction<string>
+  const setLanguage: Dispatch<SetStateAction<Langs>> = (
+    lang: SetStateAction<Langs>
   ) => {
     setLang(lang);
   };
 
   return (
-    <LenguageContext.Provider value={{ language, setLanguage }}>
+    <LanguageContext.Provider value={{ language, setLanguage }}>
       {children}
-    </LenguageContext.Provider>
+    </LanguageContext.Provider>
   );
 };
 
-describe('LenguageContext', () => {
+describe('LanguageContext', () => {
   it('updates the language state when setLanguage is called', async () => {
     render(
       <TestWrapper>
@@ -55,20 +55,20 @@ describe('LenguageContext', () => {
 
     await waitFor(() => {
       const languageValue = screen.getByTestId('language-value');
-      expect(languageValue.textContent).toBe('English');
+      expect(languageValue.textContent).toBe(Langs.English);
     });
   });
 
   describe('setLanguage function', () => {
     it('should update the language', () => {
-      let language = '';
-      const setLanguage = (newLanguage: string) => {
+      let language: Langs = Langs.Russian;
+      const setLanguage = (newLanguage: Langs) => {
         language = newLanguage;
       };
 
-      setLanguage('English');
+      setLanguage(Langs.English);
 
-      expect(language).toBe('English');
+      expect(language).toBe(Langs.English);
     });
   });
 
@@ -77,7 +77,7 @@ describe('LenguageContext', () => {
       const { setLanguage } = initialState;
       expect(setLanguage).toBeDefined();
       expect(() => {
-        setLanguage('Test');
+        setLanguage(Langs.English);
       }).not.toThrow();
     });
   });
