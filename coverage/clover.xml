@@ -1,31 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1702408100111" clover="3.2.0">
-  <project timestamp="1702408100111" name="All files">
-    <metrics statements="19" coveredstatements="19" conditionals="6" coveredconditionals="5" methods="6" coveredmethods="6" elements="31" coveredelements="30" complexity="0" loc="19" ncloc="19" packages="1" files="2" classes="2"/>
-    <file name="Header.tsx" path="E:\Grafiql-app\src\components\templates\Header\Header.tsx">
-      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="6" count="4" type="stmt"/>
-      <line num="8" count="3" type="stmt"/>
-      <line num="9" count="1" type="stmt"/>
-      <line num="10" count="1" type="stmt"/>
-      <line num="13" count="3" type="stmt"/>
-      <line num="14" count="2" type="stmt"/>
-      <line num="16" count="2" type="stmt"/>
-      <line num="17" count="2" type="stmt"/>
-      <line num="21" count="3" type="stmt"/>
-      <line num="38" count="1" type="stmt"/>
-    </file>
-    <file name="style.ts" path="E:\Grafiql-app\src\components\templates\Header\style.ts">
-      <metrics statements="5" coveredstatements="5" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
-      <line num="1" count="1" type="stmt"/>
-      <line num="2" count="1" type="stmt"/>
-      <line num="3" count="1" type="stmt"/>
-      <line num="10" count="3" type="stmt"/>
-      <line num="22" count="6" type="stmt"/>
-    </file>
+<coverage generated="1702492957570" clover="3.2.0">
+  <project timestamp="1702492957570" name="All files">
+    <metrics statements="27" coveredstatements="26" conditionals="6" coveredconditionals="5" methods="8" coveredmethods="7" elements="41" coveredelements="38" complexity="0" loc="27" ncloc="27" packages="2" files="3" classes="3"/>
+    <package name="Context">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="LenguageContext.ts" path="E:\Grafiql-app\src\components\Context\LenguageContext.ts">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="templates.Header">
+      <metrics statements="24" coveredstatements="23" conditionals="6" coveredconditionals="5" methods="7" coveredmethods="6"/>
+      <file name="Header.tsx" path="E:\Grafiql-app\src\components\templates\Header\Header.tsx">
+        <metrics statements="18" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="3" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="33" count="3" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+      </file>
+      <file name="style.ts" path="E:\Grafiql-app\src\components\templates\Header\style.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="6" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
