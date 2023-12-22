@@ -39,3 +39,11 @@ export const OpenButton = styled(Button)(({ active }: ButtonProps) => ({
     background: '#6B59CC',
   },
 }));
+
+export const DrawerGrid = styled(Grid)({
+  display: 'flex',
+  gap: '30px',
+  flexDirection: 'column',
+  width: '400px',
+  padding: '20px',
+});
