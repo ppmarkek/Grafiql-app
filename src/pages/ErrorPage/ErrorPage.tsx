@@ -1,54 +1,22 @@
-import React, { useState } from 'react';
+import { Space, Wrapper, Button, Text, Container, Digit } from './styles';
+import './errorPage.css';
 
 export default function ErrorPage() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (event: React.MouseEvent) => {
-    const domainX = [0, document.body.clientWidth];
-    const domainY = [0, document.body.clientHeight];
-    const range = [-10, 10];
-
-    const translate = {
-      x:
-        range[0] +
-        ((event.clientX - domainX[0]) * (range[1] - range[0])) /
-          (domainX[1] - domainX[0]),
-      y:
-        range[0] +
-        ((event.clientY - domainY[0]) * (range[1] - range[0])) /
-          (domainY[1] - domainY[0]),
-    };
-
-    setPosition({ x: translate.x, y: translate.y });
-  };
-
-  const handleMouseLeave = () => {
-    setPosition({ x: 0, y: 0 });
-  };
-
   return (
-    <div>
-      <div className="stars">
-        {Array.from({ length: 80 }, (_, index) => (
-          <div key={index} className="star"></div>
-        ))}
+    <Container>
+      <div className="background-img">
+        <Space></Space>
+        <Wrapper>
+          <div className="img-wrapper">
+            <Digit>44</Digit>
+          </div>
+          <Text>
+            The page you are trying to search has been moved to another
+            universe.
+          </Text>
+          <Button>GET ME HOME</Button>
+        </Wrapper>
       </div>
-      <div className="center">
-        <div className="circle circle--outer"></div>
-        <div className="circle circle--inner">
-          <div className="four four--1">4</div>
-          <div className="four four--2">4</div>
-
-          <div
-            className="circle oh"
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            style={{ transform: `translate(${position.x}px, ${position.y}px)` }}
-          ></div>
-        </div>
-        <div className="button">GO HOME</div>
-      </div>
-      <div className="sorry">Oops! Sorry, page not found.</div>
-    </div>
+    </Container>
   );
 }

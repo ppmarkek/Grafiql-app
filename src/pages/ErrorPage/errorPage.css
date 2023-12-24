@@ -1,0 +1,37 @@
+* {
+  font-family: Ubuntu, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1e234d;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+@keyframes spin {
+  
+  from {
+    transform: rotate( 0deg );
+  }
+  
+  to {
+    transform: rotate( -360deg );
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    transform: rotate( 0deg ) scale(0.2);
+    opacity: 0;
+  }
+  to {
+    transform: rotate( 360deg ) scale(1);
+    opacity: 1;
+  }
+}
