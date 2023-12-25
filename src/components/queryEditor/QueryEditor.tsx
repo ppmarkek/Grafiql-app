@@ -1,31 +1,20 @@
 import { useState } from 'react';
 
 interface Props {
-  initialQuery?: string;
-  onQueryChange?: (query: string) => void;
+  onQuerySubmit: (query: string) => void;
 }
 
-export default function QueryEditor({
-  initialQuery = '',
-  onQueryChange,
-}: Props) {
-  const [query, setQuery] = useState(initialQuery);
+export default function QueryEditor({ onQuerySubmit }: Props) {
+  const [query, setQuery] = useState<string>('');
 
   const handleQueryChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const newQuery = event.target.value;
-    setQuery(newQuery);
-    onQueryChange?.(newQuery);
+    setQuery(event.target.value);
   };
 
-  const fakePrettify = () => {
-    try {
-      const parsedQuery = JSON.parse(query);
-      const prettyQuery = JSON.stringify(parsedQuery, null, 2);
-      setQuery(prettyQuery);
-    } catch (error) {
-      console.error('Invalid JSON format', error);
-    }
+  const handleQuerySubmit = () => {
+    onQuerySubmit(query);
   };
+
   return (
     <div>
       <textarea
@@ -34,7 +23,7 @@ export default function QueryEditor({
         rows={20}
         cols={40}
       />
-      <button onClick={fakePrettify}>Prettify</button>
+      <button onClick={handleQuerySubmit}>Submit Query</button>
     </div>
   );
 }
