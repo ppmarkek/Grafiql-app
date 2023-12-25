@@ -47,3 +47,29 @@ export const DrawerGrid = styled(Grid)({
   width: '400px',
   padding: '20px',
 });
+
+export const SchemaTypesButton = styled(Button)({
+  all: 'unset',
+  display: 'flex',
+  cursor: 'pointer',
+  borderBottom: '1px solid #fff',
+  transition: 'all 0.5s',
+  span: {
+    display: 'none',
+  },
+  ':hover': {
+    backgroundColor: 'unset',
+    borderBottom: '1px solid #444',
+  },
+  ':focus': {
+    outline: 'unset',
+  },
+});
+
+export const TypesGrid = styled(Grid)({
+  display: 'flex',
+  gap: '30px',
+  flexDirection: 'column',
+  width: '400px',
+  padding: '20px',
+});
