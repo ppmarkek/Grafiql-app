@@ -40,18 +40,23 @@ const Documentation = () => {
             <Grid display={'flex'} flexDirection={'column'} gap={'10px'}>
               <Text variant={'BOLD'}>Root Types</Text>
               <Grid paddingLeft={'20px'}>
-                <Text variant={'REGULAR'}>query: Root</Text>
+                <SchemaTypesButton onClick={() => setType('Root')}>
+                  <Text variant={'REGULAR'}>query: Root</Text>
+                </SchemaTypesButton>
               </Grid>
             </Grid>
             <Grid display={'flex'} flexDirection={'column'} gap={'10px'}>
               <Text variant={'BOLD'}>All Schema Types</Text>
-              {AllSchemaTypes.map((value) => (
-                <Grid key={value.title} paddingLeft={'20px'}>
-                  <SchemaTypesButton onClick={() => setType(value.title)}>
-                    <Text variant={'REGULAR'}>{value.title}</Text>
-                  </SchemaTypesButton>
-                </Grid>
-              ))}
+              {AllSchemaTypes.map(
+                (value) =>
+                  value.title !== 'Root' && (
+                    <Grid key={value.title} paddingLeft={'20px'}>
+                      <SchemaTypesButton onClick={() => setType(value.title)}>
+                        <Text variant={'REGULAR'}>{value.title}</Text>
+                      </SchemaTypesButton>
+                    </Grid>
+                  )
+              )}
             </Grid>
           </DrawerGrid>
         ) : (
