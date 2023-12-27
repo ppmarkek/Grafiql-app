@@ -1,6 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react';
-import './QueryEditor.css';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import {
+  CodeEditor,
+  LineNums,
+  ButtonsSection,
+  CodeArea,
+  Button,
+} from './styles';
 
 interface Props {
   onQuerySubmit: (query: string) => void;
@@ -32,12 +38,12 @@ export default function QueryEditor({ onQuerySubmit }: Props) {
     const codeArea = codeAreaRef.current;
 
     if (codeArea) {
-      codeArea.addEventListener('input', handleInput);
-      codeArea.addEventListener('scroll', handleScroll);
+      codeArea.oninput = handleInput;
+      codeArea.onscroll = handleScroll;
 
       return () => {
-        codeArea.removeEventListener('input', handleInput);
-        codeArea.removeEventListener('scroll', handleScroll);
+        codeArea.oninput = null;
+        codeArea.onscroll = null;
       };
     }
 
@@ -53,16 +59,14 @@ export default function QueryEditor({ onQuerySubmit }: Props) {
   };
 
   return (
-    <div className="code-editor">
-      <div
-        className="line-numbers"
+    <CodeEditor>
+      <LineNums
         ref={lineNumbersRef}
         style={{ fontFamily: 'Consolas, monospace' }}
       >
         {Array.from({ length: lines }, (_, i) => i + 1).join('\n')}
-      </div>
-      <textarea
-        className="code-area"
+      </LineNums>
+      <CodeArea
         defaultValue={query}
         onChange={handleQueryChange}
         ref={codeAreaRef}
@@ -70,12 +74,12 @@ export default function QueryEditor({ onQuerySubmit }: Props) {
         onInput={updateLineNumbers}
         onScroll={updateLineNumbers}
         style={{ fontFamily: 'Consolas, monospace' }}
-      ></textarea>
-      <div className="buttons-section">
-        <button onClick={handleQuerySubmit}>
+      ></CodeArea>
+      <ButtonsSection className="buttons-section">
+        <Button onClick={handleQuerySubmit}>
           <PlayArrowIcon />
-        </button>
-      </div>
-    </div>
+        </Button>
+      </ButtonsSection>
+    </CodeEditor>
   );
 }
