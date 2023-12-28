@@ -24,7 +24,7 @@ type TextProps = {
     | 'ERROR'
     | Variant;
   small?: boolean;
-  children?: string | number;
+  children?: string | number | React.ReactNode;
   color?: string;
 };
 

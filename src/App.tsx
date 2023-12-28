@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Header from './components/templates/Header/Header';
+import InputEntryPoint from './components/atoms/InputEntryPoint/InputEntryPoint';
 import { LanguageContext, Langs } from './components/Context/LenguageContext';
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>
       <Header />
+      <InputEntryPoint />
     </LanguageContext.Provider>
   );
 }
