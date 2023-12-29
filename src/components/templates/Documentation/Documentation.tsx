@@ -21,13 +21,14 @@ const Documentation = () => {
     <Wrapper>
       <OpenGrid>
         <OpenButton
-          active={state}
-          onClick={() => setState(state ? false : true)}
+          active={state.toString()}
+          onClick={() => setState(!state)}
+          data-testid={'open-button'}
         >
           <ChevronRightIcon />
         </OpenButton>
       </OpenGrid>
-      <Drawer anchor={'left'} open={state}>
+      <Drawer anchor={'left'} open={state} data-testid={'drawer'}>
         {type === 'all' ? (
           <DrawerGrid>
             <Grid display={'flex'} flexDirection={'column'} gap={'10px'}>
