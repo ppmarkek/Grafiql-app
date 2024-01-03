@@ -1,0 +1,161 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputEntryPoint Component renders without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-6 css-kzse1c-MuiGrid-root"
+  >
+    <div
+      class="MuiGrid-root MuiGrid-container css-10sxku-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root css-ajil6p-MuiGrid-root"
+      >
+        <textarea
+          data-testid="mock-monaco-editor"
+        />
+      </div>
+      <div
+        class="MuiGrid-root MuiGrid-container css-12itivv-MuiGrid-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1cg76yz-MuiButtonBase-root-MuiButton-root"
+          data-testid="play-button"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="PlayArrowIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M8 5v14l11-7z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-17h4eaq-MuiButtonBase-root-MuiButton-root"
+          data-testid="copy-button"
+          tabindex="0"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+            data-testid="ContentCopyIcon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"
+            />
+          </svg>
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root MuiGrid-container css-1fldk67-MuiGrid-root"
+    >
+      <div
+        class="MuiGrid-root css-1dvh2m8-MuiGrid-root"
+      >
+        <div
+          class="MuiTabs-root css-1ujnqem-MuiTabs-root"
+        >
+          <div
+            class="MuiTabs-scroller MuiTabs-fixed css-jpln7h-MuiTabs-scroller"
+            style="overflow: hidden; margin-bottom: 0px;"
+          >
+            <div
+              aria-label="basic tabs example"
+              class="MuiTabs-flexContainer css-heg063-MuiTabs-flexContainer"
+              role="tablist"
+            >
+              <button
+                aria-controls="simple-tabpanel-0"
+                aria-selected="true"
+                class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary Mui-selected css-q4f3tu-MuiButtonBase-root-MuiTab-root"
+                id="simple-tab-0"
+                role="tab"
+                tabindex="0"
+                type="button"
+              >
+                Variables
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+              <button
+                aria-controls="simple-tabpanel-1"
+                aria-selected="false"
+                class="MuiButtonBase-root MuiTab-root MuiTab-textColorPrimary css-q4f3tu-MuiButtonBase-root-MuiTab-root"
+                id="simple-tab-1"
+                role="tab"
+                tabindex="-1"
+                type="button"
+              >
+                Headers
+                <span
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                />
+              </button>
+            </div>
+            <span
+              class="MuiTabs-indicator css-1aquho2-MuiTabs-indicator"
+              style="left: 0px; width: 0px;"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        aria-labelledby="simple-tab-0"
+        class="MuiGrid-root css-12ni89x-MuiGrid-root"
+        id="simple-tabpanel-0"
+        role="tabpanel"
+      >
+        <div
+          class="MuiGrid-root css-a3s15r-MuiGrid-root"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root css-1pe1dto-MuiFormControl-root-MuiTextField-root"
+          >
+            <div
+              class="MuiInputBase-root MuiFilledInput-root MuiFilledInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline css-85zwa9-MuiInputBase-root-MuiFilledInput-root"
+            >
+              <textarea
+                aria-invalid="false"
+                class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMultiline css-7209ej-MuiInputBase-input-MuiFilledInput-input"
+                id=":r0:"
+                style="height: 0px; overflow: hidden;"
+              />
+              <textarea
+                aria-hidden="true"
+                class="MuiInputBase-input MuiFilledInput-input MuiInputBase-inputMultiline css-7209ej-MuiInputBase-input-MuiFilledInput-input"
+                readonly=""
+                style="visibility: hidden; position: absolute; overflow: hidden; height: 0px; top: 0px; left: 0px; transform: translateZ(0); padding-top: 0px; padding-bottom: 0px; width: 100%;"
+                tabindex="-1"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-labelledby="simple-tab-1"
+        class="MuiGrid-root css-12ni89x-MuiGrid-root"
+        hidden=""
+        id="simple-tabpanel-1"
+        role="tabpanel"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

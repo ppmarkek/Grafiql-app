@@ -1,5 +1,16 @@
 import { Grid, Tabs } from '@mui/material';
-import { GridTabs, StyledTab, StyledTextField } from './style';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import * as monaco from 'monaco-editor';
+import MonacoEditor from '@monaco-editor/react';
+import {
+  ButtonGrid,
+  ButtonStart,
+  GridTabs,
+  StyledButton,
+  StyledTab,
+  StyledTextField,
+} from './style';
 import { useState } from 'react';
 
 interface TabPanelProps {
@@ -27,6 +38,7 @@ function CustomTabPanel(props: TabPanelProps) {
 
 const InputEntryPoint = () => {
   const [value, setValue] = useState(0);
+  const [inputValue, setInputValue] = useState('');
 
   const a11yProps = (index: number) => {
     return {
@@ -39,10 +51,59 @@ const InputEntryPoint = () => {
     setValue(newValue);
   };
 
+  const handleEditorChange = (value: string | undefined) => {
+    setInputValue(value || '');
+  };
+
+  const options: monaco.editor.IStandaloneEditorConstructionOptions = {
+    selectOnLineNumbers: true,
+    roundedSelection: false,
+    readOnly: false,
+    cursorStyle: 'line',
+    glyphMargin: true,
+    folding: true,
+    minimap: {
+      enabled: false,
+    },
+    autoClosingBrackets: 'always',
+    autoClosingQuotes: 'always',
+    autoSurround: 'languageDefined',
+    bracketPairColorization: { enabled: true },
+  };
+
+  const copyToClipboard = async () => {
+    if (inputValue) {
+      try {
+        await navigator.clipboard.writeText(inputValue);
+        console.log('Text copied to clipboard');
+      } catch (err) {
+        console.error('Failed to copy: ', err);
+      }
+    }
+  };
+
   return (
     <Grid container item xs={6} height={'90%'} flexDirection={'column'}>
-      <Grid container height={'100%'}>
-        <StyledTextField multiline variant="filled" />
+      <Grid container height={'75%'}>
+        <Grid width={'93%'}>
+          <MonacoEditor
+            data-testid="monaco-editor"
+            height="100%"
+            theme="vs-dark"
+            language="graphql"
+            value={inputValue}
+            onChange={handleEditorChange}
+            options={options}
+          />
+        </Grid>
+        <ButtonGrid container>
+          <ButtonStart data-testid="play-button">
+            <PlayArrowIcon />
+          </ButtonStart>
+          <StyledButton onClick={copyToClipboard} data-testid="copy-button">
+            <ContentCopyIcon />
+          </StyledButton>
+        </ButtonGrid>
       </Grid>
       <GridTabs container>
         <Grid sx={{ borderBottom: 1, borderColor: 'divider' }}>

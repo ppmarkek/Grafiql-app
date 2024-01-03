@@ -10,6 +10,7 @@ exports[`Header component becomes sticky on scroll 1`] = `
     <a
       class="css-1avdwde"
       href="/"
+      width="150px"
     >
       Welcome page
     </a>
@@ -21,8 +22,8 @@ exports[`Header component becomes sticky on scroll 1`] = `
       class="MuiFormControl-root css-1325rt7-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-        data-shrink="false"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
         id="demo-simple-select-label"
       >
         Language
@@ -40,11 +41,7 @@ exports[`Header component becomes sticky on scroll 1`] = `
           role="combobox"
           tabindex="0"
         >
-          <span
-            class="notranslate"
-          >
-            ​
-          </span>
+          EN
         </div>
         <input
           aria-hidden="true"
@@ -52,7 +49,7 @@ exports[`Header component becomes sticky on scroll 1`] = `
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           name=":r3:"
           tabindex="-1"
-          value=""
+          value="en"
         />
         <svg
           aria-hidden="true"
@@ -70,7 +67,7 @@ exports[`Header component becomes sticky on scroll 1`] = `
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-yjsfm1"
+            class="css-14lo706"
           >
             <span>
               Language
@@ -82,6 +79,7 @@ exports[`Header component becomes sticky on scroll 1`] = `
     <a
       class="css-vmh4zg"
       href="/signOut"
+      width="100px"
     >
       Sign Out
     </a>
@@ -100,6 +98,7 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
       <a
         class="css-1avdwde"
         href="/"
+        width="150px"
       >
         Welcome page
       </a>
@@ -111,8 +110,8 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
         class="MuiFormControl-root css-1325rt7-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
           id="demo-simple-select-label"
         >
           Language
@@ -130,11 +129,7 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
             role="combobox"
             tabindex="0"
           >
-            <span
-              class="notranslate"
-            >
-              ​
-            </span>
+            EN
           </div>
           <input
             aria-hidden="true"
@@ -142,7 +137,7 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
             class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
             name=":r1:"
             tabindex="-1"
-            value=""
+            value="en"
           />
           <svg
             aria-hidden="true"
@@ -160,7 +155,7 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
             class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-yjsfm1"
+              class="css-14lo706"
             >
               <span>
                 Language
@@ -172,6 +167,7 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
       <a
         class="css-vmh4zg"
         href="/signOut"
+        width="100px"
       >
         Sign Out
       </a>
