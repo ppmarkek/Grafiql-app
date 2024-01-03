@@ -5,9 +5,10 @@ import MonacoEditor from '@monaco-editor/react';
 interface Props {
   query: string;
   onChange: (value: string | undefined) => void;
+  onExecute: () => void;
 }
 
-export default function QueryEditor({ query, onChange }: Props) {
+export default function QueryEditor({ query, onChange, onExecute }: Props) {
   return (
     <CodeEditor>
       <MonacoEditor
@@ -20,8 +21,8 @@ export default function QueryEditor({ query, onChange }: Props) {
           minimap: { enabled: false },
         }}
       />
-      <ButtonsSection className="buttons-section">
-        <Button>
+      <ButtonsSection>
+        <Button onClick={onExecute}>
           <PlayArrowIcon />
         </Button>
       </ButtonsSection>

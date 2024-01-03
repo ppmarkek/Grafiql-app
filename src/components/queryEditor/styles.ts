@@ -18,7 +18,7 @@ export const LineNums = styled.div`
 `;
 
 export const ButtonsSection = styled.div`
-  background-color: #f5f5f5;
+  background-color: #292929;
   padding: 0.5rem;
 `;
 
@@ -36,7 +36,7 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
   border: none;
-  background-color: #ff2200;
+  background-color: #ff2244;
   color: #fff;
   border-radius: 0.5rem;
   cursor: pointer;
