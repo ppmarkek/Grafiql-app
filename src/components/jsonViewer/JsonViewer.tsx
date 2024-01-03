@@ -1,18 +1,23 @@
 import { Viewer } from './styles';
+import MonacoEditor from '@monaco-editor/react';
 
 interface Props {
-  jsonData: string;
+  jsonResult: string;
 }
 
-export const JsonViewer = ({ jsonData }: Props) => {
-  try {
-    const parsedData = JSON.parse(jsonData);
-    return (
-      <Viewer>
-        <pre>{JSON.stringify(parsedData, null, 2)}</pre>
-      </Viewer>
-    );
-  } catch (error) {
-    return <div>Error parsing JSON</div>;
-  }
-};
+export default function JsonViewer({ jsonResult }: Props) {
+  return (
+    <Viewer>
+      <MonacoEditor
+        height="500px"
+        language="json"
+        theme="vs-dark"
+        value={jsonResult}
+        options={{
+          readOnly: true,
+          minimap: { enabled: false },
+        }}
+      />
+    </Viewer>
+  );
+}

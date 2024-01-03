@@ -1,28 +1,35 @@
-import React, { useState } from 'react';
+import { useEffect, useState } from 'react';
 import QueryEditor from '../../components/queryEditor/QueryEditor';
-import { JsonViewer } from '../../components/jsonViewer/JsonViewer';
+import JsonViewer from '../../components/jsonViewer/JsonViewer';
 
 export default function MainPage() {
-  const [result, setResult] = useState<string | null>(null);
+  const [query, setQuery] = useState<string>('query: { hello }');
+  const [jsonResult, setJsonResult] = useState<string>('');
 
-  const handleQuerySubmit = () => {
-    const mockedData = {
-      data: {
-        books: [
-          { id: '1', name: 'Jason', language: { name: 'Typescript' } },
-          { id: '2', name: 'Maria', language: { name: 'Python' } },
-          { id: '3', name: 'Elizabeth', language: { name: 'C' } },
-        ],
+  useEffect(() => {
+    const fakeApi = 'https://rickandmortyapi.com/api';
+
+    fetch(fakeApi, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
-    };
+      body: JSON.stringify({ query }),
+    })
+      .then((response) => response.json())
+      .then((data) => setJsonResult(JSON.stringify(data, null, 2)))
+      .catch((error) => console.error('Error: ', error));
+  }, [query]);
 
-    setResult(JSON.stringify(mockedData, null, 2));
+  const handleQueryChange = (value: string | undefined) => {
+    const updatedValue = value || '';
+    setQuery(updatedValue);
   };
 
   return (
     <div>
-      <QueryEditor onQuerySubmit={handleQuerySubmit} />
-      {result && <JsonViewer jsonData={result} />}
+      <QueryEditor query={query} onChange={handleQueryChange} />
+      <JsonViewer jsonResult={jsonResult} />
     </div>
   );
 }
