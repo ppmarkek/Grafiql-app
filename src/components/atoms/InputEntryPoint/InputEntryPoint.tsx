@@ -1,20 +1,21 @@
+import React, { useContext } from 'react';
+import { ValueContext } from '../../Context/ValueContext';
+import { Wrapper, StyledInput, ButtonStart } from './style';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import { ButtonStart, Wrapper, StyledInput } from './style';
-import { SetStateAction, useState } from 'react';
 
 const InputEntryPoint = () => {
-  const [value, setValue] = useState('');
+  const { inputEntryPoint, setInputEntryPoint } = useContext(ValueContext);
 
   const handleChange = (event: {
-    target: { value: SetStateAction<string> };
+    target: { value: React.SetStateAction<string> };
   }) => {
-    setValue(event.target.value);
+    setInputEntryPoint(event.target.value);
   };
 
   return (
     <Wrapper container item xs={6}>
-      <StyledInput value={value} onChange={handleChange} />
-      <ButtonStart onClick={() => console.log(value)}>
+      <StyledInput value={inputEntryPoint} onChange={handleChange} />
+      <ButtonStart onClick={() => console.log(inputEntryPoint)}>
         <PlayArrowIcon />
       </ButtonStart>
     </Wrapper>

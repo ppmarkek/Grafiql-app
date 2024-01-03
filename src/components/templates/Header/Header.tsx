@@ -7,11 +7,11 @@ import {
   Select,
   SelectChangeEvent,
 } from '@mui/material';
-import { LanguageContext, Langs } from '../../Context/LenguageContext';
+import { ValueContext, Langs } from '../../Context/ValueContext';
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
-  const { language, setLanguage } = useContext(LanguageContext);
+  const { language, setLanguage } = useContext(ValueContext);
 
   const handleScroll = () => {
     const offset = window.scrollY;

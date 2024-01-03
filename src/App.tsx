@@ -1,18 +1,19 @@
 import { useState } from 'react';
 import Header from './components/templates/Header/Header';
 import InputEntryPoint from './components/atoms/InputEntryPoint/InputEntryPoint';
-import { LanguageContext, Langs } from './components/Context/LenguageContext';
+import { ValueContext, Langs } from './components/Context/ValueContext';
 
 function App() {
   const [language, setLanguage] = useState<Langs>(Langs.en);
-
-  console.log(language);
+  const [inputEntryPoint, setInputEntryPoint] = useState('');
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
+    <ValueContext.Provider
+      value={{ language, setLanguage, inputEntryPoint, setInputEntryPoint }}
+    >
       <Header />
       <InputEntryPoint />
-    </LanguageContext.Provider>
+    </ValueContext.Provider>
   );
 }
 

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1704296851525" clover="3.2.0">
-  <project timestamp="1704296851525" name="All files">
-    <metrics statements="65" coveredstatements="64" conditionals="12" coveredconditionals="11" methods="15" coveredmethods="14" elements="92" coveredelements="89" complexity="0" loc="65" ncloc="65" packages="7" files="11" classes="11"/>
+<coverage generated="1704311578865" clover="3.2.0">
+  <project timestamp="1704311578865" name="All files">
+    <metrics statements="66" coveredstatements="65" conditionals="12" coveredconditionals="11" methods="16" coveredmethods="15" elements="94" coveredelements="91" complexity="0" loc="66" ncloc="66" packages="7" files="11" classes="11"/>
     <package name="Context">
-      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-      <file name="LenguageContext.ts" path="E:\Grafiql-app\src\components\Context\LenguageContext.ts">
-        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
-        <line num="1" count="2" type="stmt"/>
-        <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="18" count="2" type="stmt"/>
+      <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+      <file name="ValueContext.ts" path="E:\Grafiql-app\src\components\Context\ValueContext.ts">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="4" count="3" type="stmt"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
       </file>
     </package>
     <package name="FormInput">
@@ -25,19 +25,20 @@
       </file>
     </package>
     <package name="atoms.InputEntryPoint">
-      <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="InputEntryPoint.tsx" path="E:\Grafiql-app\src\components\atoms\InputEntryPoint\InputEntryPoint.tsx">
-        <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
       </file>
       <file name="style.ts" path="E:\Grafiql-app\src\components\atoms\InputEntryPoint\style.ts">
         <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
