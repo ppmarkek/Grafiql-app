@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import QueryEditor from '../../components/queryEditor/QueryEditor';
 import JsonViewer from '../../components/jsonViewer/JsonViewer';
+import { Container } from '../../styles/common';
 
 export default function MainPage() {
   const [query, setQuery] = useState<string>('query: { hello }');
@@ -28,13 +29,13 @@ export default function MainPage() {
   };
 
   return (
-    <div>
+    <Container>
       <QueryEditor
         query={query}
         onChange={handleQueryChange}
         onExecute={executeQuery}
       />
       <JsonViewer jsonResult={jsonResult} />
-    </div>
+    </Container>
   );
 }

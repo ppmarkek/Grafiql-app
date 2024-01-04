@@ -1,5 +1,6 @@
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-import { CodeEditor, ButtonsSection, Button } from './styles';
+import { Button } from './styles';
+import { CodeEditor, ButtonsSection } from '../../styles/common';
 import MonacoEditor from '@monaco-editor/react';
 
 interface Props {
@@ -12,7 +13,6 @@ export default function QueryEditor({ query, onChange, onExecute }: Props) {
   return (
     <CodeEditor>
       <MonacoEditor
-        height="500px"
         language="graphql"
         theme="vs-dark"
         value={query}
@@ -23,7 +23,7 @@ export default function QueryEditor({ query, onChange, onExecute }: Props) {
       />
       <ButtonsSection>
         <Button onClick={onExecute}>
-          <PlayArrowIcon />
+          <PlayArrowIcon fontSize="medium" />
         </Button>
       </ButtonsSection>
     </CodeEditor>
