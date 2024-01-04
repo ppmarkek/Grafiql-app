@@ -29,7 +29,7 @@ export default function MainPage() {
   };
 
   return (
-    <Container>
+    <Container id="main-page">
       <QueryEditor
         query={query}
         onChange={handleQueryChange}

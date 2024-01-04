@@ -22,7 +22,7 @@ export default function QueryEditor({ query, onChange, onExecute }: Props) {
         }}
       />
       <ButtonsSection>
-        <Button onClick={onExecute}>
+        <Button onClick={onExecute} id="execute-button">
           <PlayArrowIcon fontSize="medium" />
         </Button>
       </ButtonsSection>
