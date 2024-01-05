@@ -25,7 +25,19 @@ export default defineConfig(({ mode }) => {
       ),
     },
     plugins: [
-      react(),
+      react({
+        babel: {
+          plugins: [
+            [
+              'babel-plugin-styled-components',
+              {
+                displayName: true,
+                fileName: false,
+              },
+            ],
+          ],
+        },
+      }),
       {
         name: 'configure-response-headers',
         configureServer: (server) => {
