@@ -1,35 +1,29 @@
 import { Link } from 'react-router-dom';
 import { PrimaryButton } from '../buttons/PrimaryButton';
 import { ButtonsContainer } from './style';
+import { useI18n } from '../Context/ValueContext';
 
 interface Props {
   isAuthorized?: boolean;
-  signInButtonText?: string;
-  signUpButtonText?: string;
-  mainPageButtonText?: string;
 }
 
-export default function AuthButtons({
-  isAuthorized,
-  signInButtonText,
-  signUpButtonText,
-  mainPageButtonText,
-}: Props) {
+export default function AuthButtons({ isAuthorized }: Props) {
+  const i18n = useI18n();
   return (
     <ButtonsContainer>
       {isAuthorized ? (
         <>
           <Link to="/main">
-            <PrimaryButton>{mainPageButtonText}</PrimaryButton>
+            <PrimaryButton>{i18n.main.mainLink}</PrimaryButton>
           </Link>
         </>
       ) : (
         <>
           <Link to="/signin">
-            <PrimaryButton>{signInButtonText}</PrimaryButton>
+            <PrimaryButton>{i18n.auth.signInLink}</PrimaryButton>
           </Link>
           <Link to="/signup">
-            <PrimaryButton>{signUpButtonText}</PrimaryButton>
+            <PrimaryButton>{i18n.auth.signUpLink}</PrimaryButton>
           </Link>
         </>
       )}

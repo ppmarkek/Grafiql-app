@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Grid, MenuItem, SelectChangeEvent } from '@mui/material';
-import { ValueContext, Langs } from '../../Context/ValueContext';
+import { ValueContext, Langs, useI18n } from '../../Context/ValueContext';
 import {
   StyledFormControl,
   StyledInputLabel,
@@ -12,6 +12,7 @@ import {
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
   const { language, setLanguage } = useContext(ValueContext);
+  const i18n = useI18n();
 
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -34,14 +35,14 @@ const Header = () => {
     <Wrapper container isSticky={isSticky}>
       <Grid item xs={6}>
         <StyledLink isSticky={isSticky} width="150px" to={'/'}>
-          Welcome page
+          {i18n.welcome.welcomeLink}
         </StyledLink>
       </Grid>
 
       <Grid container item xs={6} justifyContent={'flex-end'} gap={'20px'}>
         <StyledFormControl>
           <StyledInputLabel isSticky={isSticky} id="demo-simple-select-label">
-            Language
+            {i18n.main.language}
           </StyledInputLabel>
           <StyledSelect
             isSticky={isSticky}
@@ -56,7 +57,7 @@ const Header = () => {
           </StyledSelect>
         </StyledFormControl>
         <StyledLink isSticky={isSticky} width="100px" to={'/signOut'}>
-          Sign Out
+          {i18n.auth.signOutLink}
         </StyledLink>
       </Grid>
     </Wrapper>

@@ -11,6 +11,18 @@
 		"dontHaveAccount": "Нет учетной записи?",
 		"haveAccount": "Есть учетная запись?",
 		"signInLink": "Вход",
-		"signUpLink": "Регистрация"
+		"signUpLink": "Регистрация",
+		"signOutLink": "Выйти"
+	},
+	"main": {
+		"mainLink": "К главной странице",
+		"language": "Язык"
+	},
+	"welcome": {
+		"welcomeLink": "К стартовой странице",
+		"welcomeText": "ДратуТи!!!!",
+		"projectText": "Что-то про проект",
+		"developersText": "что-то от разработчиков",
+		"courseText": "и чуть-чуть о курсе"
 	}
 }

@@ -11,6 +11,18 @@
 		"dontHaveAccount": "Don't have account?",
 		"haveAccount": "Already have an account?",
 		"signInLink": "SignIn",
-		"signUpLink": "SignUp"
+		"signUpLink": "SignUp",
+		"signOutLink": "Sign Out"
+	},
+	"main": {
+		"mainLink": "Back to main page",
+		"language": "Language"
+	},
+	"welcome": {
+		"welcomeLink": "To welcome page",
+		"welcomeText": "HeLLLLOOOO!!!!",
+		"projectText": "Project text",
+		"developersText": "developers text",
+		"courseText": "course text"
 	}
 }
