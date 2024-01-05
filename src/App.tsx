@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import WelcomePage from './pages/WelcomePage';
+import MainPage from './pages/mainPage/MainPage';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import { LanguageContext, Langs } from './components/Context/LenguageContext';
 import './index.css';
@@ -13,6 +14,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<WelcomePage />} />
+          <Route path="/main" element={<MainPage />} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       </Router>
