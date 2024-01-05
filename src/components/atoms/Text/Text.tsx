@@ -20,7 +20,6 @@ type TextProps = {
     | 'H5'
     | 'BOLD'
     | 'REGULAR'
-    | 'LIGHT'
     | 'ERROR'
     | Variant;
   small?: boolean;

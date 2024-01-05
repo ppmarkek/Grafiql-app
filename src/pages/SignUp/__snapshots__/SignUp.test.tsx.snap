@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignUp should render without errors 1`] = `
+<div
+  className="MuiGrid-root css-x9vj63-MuiGrid-root"
+>
+  <div
+    className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation3 css-dfu1h7-MuiPaper-root"
+  >
+    <h1>
+      Регистрация
+    </h1>
+    <form
+      onSubmit={[Function]}
+    >
+      <ul
+        className="MuiList-root MuiList-padding css-1mcnwpj-MuiList-root"
+      >
+        <li
+          className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+          disabled={false}
+        >
+          <div
+            className="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink={false}
+              htmlFor="name"
+            >
+              Имя
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="component-error-text"
+                aria-invalid={false}
+                className="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                disabled={false}
+                id="name"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                type="text"
+                value=""
+              />
+              <fieldset
+                aria-hidden={true}
+                className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="css-yjsfm1"
+                >
+                  <span>
+                    Имя
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </li>
+        <li
+          className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+          disabled={false}
+        >
+          <div
+            className="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink={false}
+              htmlFor="email"
+            >
+              Электронная почта
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="component-error-text"
+                aria-invalid={false}
+                className="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                disabled={false}
+                id="email"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                type="email"
+                value=""
+              />
+              <fieldset
+                aria-hidden={true}
+                className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="css-yjsfm1"
+                >
+                  <span>
+                    Электронная почта
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </li>
+        <li
+          className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+          disabled={false}
+        >
+          <div
+            className="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink={false}
+              htmlFor="password"
+            >
+              Пароль
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="component-error-text"
+                aria-invalid={false}
+                className="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                disabled={false}
+                id="password"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                type="password"
+                value=""
+              />
+              <fieldset
+                aria-hidden={true}
+                className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="css-yjsfm1"
+                >
+                  <span>
+                    Пароль
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </li>
+        <li
+          className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+          disabled={false}
+        >
+          <div
+            className="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+          >
+            <label
+              className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+              data-shrink={false}
+              htmlFor="passwordConfirm"
+            >
+              Подтверждение пароля
+            </label>
+            <div
+              className="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root"
+              onClick={[Function]}
+            >
+              <input
+                aria-describedby="component-error-text"
+                aria-invalid={false}
+                className="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+                disabled={false}
+                id="passwordConfirm"
+                onAnimationStart={[Function]}
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                required={false}
+                type="password"
+                value=""
+              />
+              <fieldset
+                aria-hidden={true}
+                className="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  className="css-yjsfm1"
+                >
+                  <span>
+                    Подтверждение пароля
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+        </li>
+        <li
+          className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+          disabled={false}
+        >
+          <button
+            className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+            disabled={false}
+            onBlur={[Function]}
+            onContextMenu={[Function]}
+            onDragLeave={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            tabIndex={0}
+            type="submit"
+          >
+            Отправить
+          </button>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>
+`;
