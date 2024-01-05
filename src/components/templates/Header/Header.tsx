@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
-import {
-  Grid,
-  InputLabel,
-  MenuItem,
-  Select,
-  SelectChangeEvent,
-} from '@mui/material';
+import { Grid, MenuItem, SelectChangeEvent } from '@mui/material';
 import { ValueContext, Langs } from '../../Context/ValueContext';
+import {
+  StyledFormControl,
+  StyledInputLabel,
+  StyledLink,
+  StyledSelect,
+  Wrapper,
+} from './style';
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);

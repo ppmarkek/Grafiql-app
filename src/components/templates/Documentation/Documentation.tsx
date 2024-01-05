@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 import {
   DrawerGrid,
   OpenButton,
@@ -9,13 +9,14 @@ import {
 } from './style';
 import { Drawer, Grid } from '@mui/material';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import Text from '../../atoms/Text/Text';
 import { AllSchemaTypesEN, AllSchemaTypesRU } from './AllSchemaTypes';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
-import { LanguageContext } from '../../Context/LenguageContext';
+
+import Text from '../../atoms/Text/Text';
+import { useLanguage } from '../../Context/ValueContext';
 
 const Documentation = () => {
-  const { language } = useContext(LanguageContext);
+  const [language] = useLanguage();
   const [state, setState] = useState(false);
   const [type, setType] = useState('all');
 
@@ -54,7 +55,10 @@ const Documentation = () => {
                 (value) =>
                   value.title !== 'Root' && (
                     <Grid key={value.title} paddingLeft={'20px'}>
-                      <SchemaTypesButton onClick={() => setType(value.title)} data-testid={'schema-types-button'}>
+                      <SchemaTypesButton
+                        onClick={() => setType(value.title)}
+                        data-testid={'schema-types-button'}
+                      >
                         <Text variant={'REGULAR'}>{value.title}</Text>
                       </SchemaTypesButton>
                     </Grid>
