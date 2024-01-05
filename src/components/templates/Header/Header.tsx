@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { StyledFormControl, StyledLink, Wrapper } from './style';
 import {
-  Grid,
-  InputLabel,
-  MenuItem,
-  Select,
-  SelectChangeEvent,
-} from '@mui/material';
+  StyledFormControl,
+  StyledInputLabel,
+  StyledLink,
+  StyledSelect,
+  Wrapper,
+} from './style';
+import { Grid, MenuItem, SelectChangeEvent } from '@mui/material';
 import { LanguageContext, Langs } from '../../Context/LenguageContext';
 
 const Header = () => {
@@ -18,8 +18,8 @@ const Header = () => {
     setIsSticky(offset > 50);
   };
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setLanguage(event.target.value as Langs);
+  const handleChange = (event: SelectChangeEvent<unknown>) => {
+    setLanguage(event.target.value as string as Langs);
   };
 
   useEffect(() => {
@@ -33,15 +33,18 @@ const Header = () => {
   return (
     <Wrapper container isSticky={isSticky}>
       <Grid item xs={6}>
-        <StyledLink width="150px" to={'/'}>
+        <StyledLink isSticky={isSticky} width="150px" to={'/'}>
           Welcome page
         </StyledLink>
       </Grid>
 
       <Grid container item xs={6} justifyContent={'flex-end'} gap={'20px'}>
         <StyledFormControl>
-          <InputLabel id="demo-simple-select-label">Language</InputLabel>
-          <Select
+          <StyledInputLabel isSticky={isSticky} id="demo-simple-select-label">
+            Language
+          </StyledInputLabel>
+          <StyledSelect
+            isSticky={isSticky}
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={language}
@@ -50,9 +53,9 @@ const Header = () => {
           >
             <MenuItem value={Langs.ru}>RU</MenuItem>
             <MenuItem value={Langs.en}>EN</MenuItem>
-          </Select>
+          </StyledSelect>
         </StyledFormControl>
-        <StyledLink width="100px" to={'/signOut'}>
+        <StyledLink isSticky={isSticky} width="100px" to={'/signOut'}>
           Sign Out
         </StyledLink>
       </Grid>

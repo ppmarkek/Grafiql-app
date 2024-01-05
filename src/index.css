@@ -79,3 +79,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+code {
+  background-color: #b7c2d7;
+  padding: 0px 5px;
+  border-radius: 5px;
+}
