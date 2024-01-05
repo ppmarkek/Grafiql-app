@@ -1,17 +1,16 @@
 import React, { useState, useEffect, useContext } from 'react';
 import {
-  StyledFormControl,
-  StyledInputLabel,
-  StyledLink,
-  StyledSelect,
-  Wrapper,
-} from './style';
-import { Grid, MenuItem, SelectChangeEvent } from '@mui/material';
-import { LanguageContext, Langs } from '../../Context/LenguageContext';
+  Grid,
+  InputLabel,
+  MenuItem,
+  Select,
+  SelectChangeEvent,
+} from '@mui/material';
+import { ValueContext, Langs } from '../../Context/ValueContext';
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
-  const { language, setLanguage } = useContext(LanguageContext);
+  const { language, setLanguage } = useContext(ValueContext);
 
   const handleScroll = () => {
     const offset = window.scrollY;

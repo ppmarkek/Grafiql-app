@@ -1,16 +1,10 @@
-import React, {
-  Dispatch,
-  ReactNode,
-  SetStateAction,
-  useContext,
-  useState,
-} from 'react';
-import { render, screen, act, waitFor } from '@testing-library/react';
+import React, { useContext, useState } from 'react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { LanguageContext, Langs, initialState } from '../LenguageContext';
+import { ValueContext, Langs, initialState } from '../ValueContext';
 
 const TestComponent = () => {
-  const { language, setLanguage } = useContext(LanguageContext);
+  const { language, setLanguage } = useContext(ValueContext);
 
   return (
     <div>
@@ -20,27 +14,42 @@ const TestComponent = () => {
   );
 };
 
-interface TestWrapperProps {
-  children: ReactNode;
-}
-
-const TestWrapper: React.FC<TestWrapperProps> = ({ children }) => {
-  const [language, setLang] = useState<Langs>(Langs.en);
-
-  const setLanguage: Dispatch<SetStateAction<Langs>> = (
-    lang: SetStateAction<Langs>
-  ) => {
-    setLang(lang);
-  };
+const TestInputComponent = () => {
+  const { inputEntryPoint, setInputEntryPoint } = useContext(ValueContext);
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage }}>
-      {children}
-    </LanguageContext.Provider>
+    <div>
+      <span data-testid="input-value">{inputEntryPoint}</span>
+      <button onClick={() => setInputEntryPoint('test value')}>
+        Set Input Value
+      </button>
+    </div>
   );
 };
 
-describe('LanguageContext', () => {
+interface TestWrapperProps {
+  children: React.ReactNode;
+}
+
+const TestWrapper: React.FC<TestWrapperProps> = ({ children }) => {
+  const [language, setLanguage] = useState<Langs>(Langs.en);
+  const [inputEntryPoint, setInputEntryPoint] = useState<string>('');
+
+  return (
+    <ValueContext.Provider
+      value={{
+        language,
+        setLanguage,
+        inputEntryPoint,
+        setInputEntryPoint,
+      }}
+    >
+      {children}
+    </ValueContext.Provider>
+  );
+};
+
+describe('ValueContext', () => {
   it('updates the language state when setLanguage is called', async () => {
     render(
       <TestWrapper>
@@ -49,9 +58,7 @@ describe('LanguageContext', () => {
     );
 
     const button = screen.getByRole('button', { name: /set to english/i });
-    act(() => {
-      userEvent.click(button);
-    });
+    userEvent.click(button);
 
     await waitFor(() => {
       const languageValue = screen.getByTestId('language-value');
@@ -59,26 +66,35 @@ describe('LanguageContext', () => {
     });
   });
 
-  describe('setLanguage function', () => {
-    it('should update the language', () => {
-      let language: Langs = Langs.ru;
-      const setLanguage = (newLanguage: Langs) => {
-        language = newLanguage;
-      };
+  it('updates the inputEntryPoint state when setInputEntryPoint is called', async () => {
+    render(
+      <TestWrapper>
+        <TestInputComponent />
+      </TestWrapper>
+    );
 
-      setLanguage(Langs.en);
+    const button = screen.getByRole('button', { name: /set input value/i });
+    userEvent.click(button);
 
-      expect(language).toBe(Langs.en);
+    await waitFor(() => {
+      const inputValue = screen.getByTestId('input-value');
+      expect(inputValue.textContent).toBe('test value');
     });
   });
 
-  describe('initialState', () => {
-    it('provides a no-op setLanguage function', () => {
-      const { setLanguage } = initialState;
-      expect(setLanguage).toBeDefined();
-      expect(() => {
-        setLanguage(Langs.en);
-      }).not.toThrow();
-    });
+  it('provides a no-op setLanguage function from initialState', () => {
+    const { setLanguage } = initialState;
+    expect(setLanguage).toBeDefined();
+    expect(() => {
+      setLanguage(Langs.en);
+    }).not.toThrow();
+  });
+
+  it('provides a no-op setInputEntryPoint function from initialState', () => {
+    const { setInputEntryPoint } = initialState;
+    expect(setInputEntryPoint).toBeDefined();
+    expect(() => {
+      setInputEntryPoint('new value');
+    }).not.toThrow();
   });
 });
