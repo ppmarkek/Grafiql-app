@@ -2,7 +2,7 @@
 
 exports[`Header component becomes sticky on scroll 1`] = `
 <div
-  class="MuiGrid-root MuiGrid-container css-1tvgrjt-MuiGrid-root"
+  class="MuiGrid-root MuiGrid-container css-jt49ft-MuiGrid-root"
 >
   <div
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
@@ -29,10 +29,10 @@ exports[`Header component becomes sticky on scroll 1`] = `
         Language
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-18a5grb-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":r2:"
+          aria-controls=":r1:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="demo-simple-select-label demo-simple-select"
@@ -47,7 +47,6 @@ exports[`Header component becomes sticky on scroll 1`] = `
           aria-hidden="true"
           aria-invalid="false"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-          name=":r3:"
           tabindex="-1"
           value="en"
         />
@@ -90,13 +89,13 @@ exports[`Header component becomes sticky on scroll 1`] = `
 exports[`Header component renders correctly and matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="MuiGrid-root MuiGrid-container css-cczecm-MuiGrid-root"
+    class="MuiGrid-root MuiGrid-container css-lfpak2-MuiGrid-root"
   >
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
     >
       <a
-        class="css-1avdwde"
+        class="css-1gztb2e"
         href="/"
         width="150px"
       >
@@ -117,7 +116,7 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
           Language
         </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1slsstf-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
         >
           <div
             aria-controls=":r0:"
@@ -135,7 +134,6 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
             aria-hidden="true"
             aria-invalid="false"
             class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
-            name=":r1:"
             tabindex="-1"
             value="en"
           />
@@ -165,7 +163,7 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
         </div>
       </div>
       <a
-        class="css-vmh4zg"
+        class="css-6xsvjt"
         href="/signOut"
         width="100px"
       >

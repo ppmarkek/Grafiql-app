@@ -126,15 +126,18 @@
 <a name='L61'></a><a href='#L61'>61</a>
 <a name='L62'></a><a href='#L62'>62</a>
 <a name='L63'></a><a href='#L63'>63</a>
-<a name='L64'></a><a href='#L64'>64</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -188,9 +191,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState, useEffect, useContext } from 'react';
-import { StyledFormControl, StyledLink, Wrapper } from './style';
 import {
   Grid,
   InputLabel,
@@ -203,6 +208,7 @@ import { ValueContext, Langs } from '../../Context/ValueContext';
 const Header = () =&gt; {
   const [isSticky, setIsSticky] = useState(false);
   const { language, setLanguage } = useContext(ValueContext);
+
 &nbsp;
   const handleScroll = () =&gt; {
     const offset = window.scrollY;
@@ -231,8 +237,11 @@ const Header = () =&gt; {
 &nbsp;
       &lt;Grid container item xs={6} justifyContent={'flex-end'} gap={'20px'}&gt;
         &lt;StyledFormControl&gt;
-          &lt;InputLabel id="demo-simple-select-label"&gt;Language&lt;/InputLabel&gt;
-          &lt;Select
+          &lt;StyledInputLabel isSticky={isSticky} id="demo-simple-select-label"&gt;
+            Language
+          &lt;/StyledInputLabel&gt;
+          &lt;StyledSelect
+            isSticky={isSticky}
             labelId="demo-simple-select-label"
             id="demo-simple-select"
             value={language}
