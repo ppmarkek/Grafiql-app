@@ -23,6 +23,9 @@ export default defineConfig(({ mode }) => {
       'process.env.REACT_APP_MEASUREMENT_ID': JSON.stringify(
         env.REACT_APP_MEASUREMENT_ID
       ),
+      'process.env.REACT_APP_DEFAULT_GQL_API': JSON.stringify(
+        env.REACT_APP_DEFAULT_GQL_API
+      ),
     },
     plugins: [
       react({
