@@ -3,14 +3,16 @@ import JsonViewer from './JsonViewer';
 
 test('JsonViewer renders correctly', () => {
   const jsonResult = '{"key": "value"}';
-  render(<JsonViewer jsonResult={jsonResult} />);
+  console.log(jsonResult);
+  render(<JsonViewer />);
 
   expect(screen.getByLabelText('Code Editor')).toBeInTheDocument();
 });
 
 test('JsonViewer copies content to clipboard on button click', async () => {
   const jsonResult = '{"key": "value"}';
-  render(<JsonViewer jsonResult={jsonResult} />);
+  console.log(jsonResult);
+  render(<JsonViewer />);
 
   document.execCommand = jest.fn();
 

@@ -10,7 +10,8 @@
     "fix": "prettier --write .",
     "preview": "vite preview",
     "prepare": "husky install",
-    "test": "jest --watch --testPathPattern=./src/components"
+    "tests": "jest --watch --testPathPattern=./src/components",
+    "test": "jest"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",

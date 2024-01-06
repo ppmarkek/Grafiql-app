@@ -21,7 +21,11 @@ describe('InputEntryPoint', () => {
           setInputEntryPoint: mockSetInputEntryPoint,
         }}
       >
-        <InputEntryPoint />
+        <InputEntryPoint
+          value={''}
+          onChange={mockSetInputEntryPoint}
+          onExecute={mockSetInputEntryPoint}
+        />
       </ValueContext.Provider>
     );
 
