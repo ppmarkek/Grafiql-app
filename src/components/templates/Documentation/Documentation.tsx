@@ -20,6 +20,8 @@ const Documentation = () => {
   const [state, setState] = useState(false);
   const [type, setType] = useState('all');
 
+  console.log(language);
+
   return (
     <Wrapper>
       <OpenGrid>
@@ -32,7 +34,7 @@ const Documentation = () => {
         </OpenButton>
       </OpenGrid>
       <Drawer anchor={'left'} open={state} data-testid={'drawer'}>
-        {type === 'all' && language === 'en' && (
+        {type === 'all' && language === 'e' && (
           <DrawerGrid>
             <Grid display={'flex'} flexDirection={'column'} gap={'10px'}>
               <Text variant={'H2'}>Docs</Text>
@@ -67,7 +69,7 @@ const Documentation = () => {
             </Grid>
           </DrawerGrid>
         )}
-        {type !== 'all' && language === 'en' && (
+        {type !== 'all' && language === 'e' && (
           <TypesGrid>
             <Grid>
               <SchemaTypesButton onClick={() => setType('all')}>
@@ -88,7 +90,7 @@ const Documentation = () => {
             )}
           </TypesGrid>
         )}
-        {type === 'all' && language === 'ru' && (
+        {type === 'all' && language === 'r' && (
           <DrawerGrid>
             <Grid display={'flex'} flexDirection={'column'} gap={'10px'}>
               <Text variant={'H2'}>Docs</Text>
@@ -120,7 +122,7 @@ const Documentation = () => {
             </Grid>
           </DrawerGrid>
         )}
-        {type !== 'all' && language === 'ru' && (
+        {type !== 'all' && language === 'r' && (
           <TypesGrid>
             <Grid>
               <SchemaTypesButton onClick={() => setType('all')}>
