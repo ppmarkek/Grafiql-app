@@ -9,6 +9,7 @@ import SignIn from './pages/SignIn/SignIn';
 import Header from './components/templates/Header/Header';
 import { Provider } from 'react-redux';
 import { store } from './services/api/createdStore';
+import ProtectedRoute from './components/protectedRoute/ProtectedRoute';
 
 function App() {
   const [language, setLanguage] = useState<Langs>(Langs.en);
@@ -23,7 +24,14 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<WelcomePage />} />
-            <Route path="/main" element={<MainPage />} />
+            <Route
+              path="/main"
+              element={
+                <ProtectedRoute>
+                  <MainPage />
+                </ProtectedRoute>
+              }
+            />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="*" element={<ErrorPage />} />

@@ -26,7 +26,7 @@ const Documentation = () => {
     <Wrapper>
       <OpenGrid>
         <OpenButton
-          active={state}
+          active={String(state)}
           onClick={() => setState(!state)}
           data-testid={'open-button'}
         >
