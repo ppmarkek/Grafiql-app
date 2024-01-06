@@ -16,7 +16,6 @@ import { useNavigate } from 'react-router';
 const Header = () => {
   const { user, logout } = useFirebaseAuth();
   const navigate = useNavigate();
-  console.log(user);
   const [isSticky, setIsSticky] = useState(false);
   const { language, setLanguage } = useContext(ValueContext);
   const i18n = useI18n();

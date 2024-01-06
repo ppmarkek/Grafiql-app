@@ -3,21 +3,32 @@ import { FormikProps, useFormik } from 'formik';
 import FormInput, { Values } from '../../components/FormInput/FormInput';
 
 import { useFirebaseAuth } from '../../services/auth/firebase';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import GoogleButton from '../../components/GoogleButton/GoogleButton';
 import { useI18n } from '../../components/Context/ValueContext';
+import * as Yup from 'yup';
+import { useEffect } from 'react';
+
+const SignUpSchema = Yup.object().shape({
+  name: Yup.string().min(2).max(50).required('Required'),
+  email: Yup.string().email('Invalid email').required('Required'),
+  password: Yup.string().min(8, 'Too Short!').required('Required'),
+  passwordConfirm: Yup.string().oneOf(
+    [Yup.ref('password'), undefined],
+    'Passwords must match'
+  ),
+});
 
 const SignUp = () => {
   const i18n = useI18n();
+  const { user, error, registerWithEmailAndPassword, signInWithGoogle } =
+    useFirebaseAuth();
+  const navigate = useNavigate();
 
-  const {
-    user,
-    loading,
-    error,
-    registerWithEmailAndPassword,
-    signInWithGoogle,
-  } = useFirebaseAuth();
-  console.log(user, loading, error);
+  useEffect(() => {
+    if (user) navigate('/main');
+  }, [navigate, user]);
+
   const formik: FormikProps<Values> = useFormik({
     initialValues: {
       name: '',
@@ -25,9 +36,9 @@ const SignUp = () => {
       password: '',
       passwordConfirm: '',
     },
+    validationSchema: SignUpSchema,
     onSubmit: (values) => {
       registerWithEmailAndPassword(values.name, values.email, values.password);
-      alert(JSON.stringify(values, null, 2));
     },
   });
   return (
@@ -62,6 +73,7 @@ const SignUp = () => {
           <List
             sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
           >
+            {error && <ListItem>{error.code}</ListItem>}
             <ListItem>
               <FormInput
                 title={'name'}

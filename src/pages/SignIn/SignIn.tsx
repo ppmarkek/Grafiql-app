@@ -7,6 +7,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import GoogleButton from '../../components/GoogleButton/GoogleButton';
 import { useI18n } from '../../components/Context/ValueContext';
 import * as Yup from 'yup';
+import { useEffect } from 'react';
 
 const SignInSchema = Yup.object().shape({
   email: Yup.string().email('Invalid email').required('Required'),
@@ -18,7 +19,10 @@ const SignIn = () => {
   const { user, error, signInWithGoogle, logInWithEmailAndPassword } =
     useFirebaseAuth();
   const navigate = useNavigate();
-  console.log('user', user);
+
+  useEffect(() => {
+    if (user) navigate('/main');
+  }, [navigate, user]);
 
   const formik: FormikProps<Values> = useFormik({
     initialValues: {
@@ -30,7 +34,6 @@ const SignIn = () => {
     validationSchema: SignInSchema,
     onSubmit: (values) => {
       logInWithEmailAndPassword(values.email, values.password);
-      if (user) navigate('/main');
     },
   });
   return (
