@@ -3,6 +3,7 @@ import WelcomeText from '../components/welcomeText/WelcomeText';
 import Footer from '../components/footer/Footer';
 import { WelcomePageContainer } from '../styles/commonStyles';
 import { useI18n } from '../components/Context/ValueContext';
+import Documentation from '../components/templates/Documentation/Documentation';
 
 export default function WelcomePage() {
   const i18n = useI18n();
@@ -14,6 +15,7 @@ export default function WelcomePage() {
         developersText={i18n.welcome.developersText}
         courseText={i18n.welcome.courseText}
       />
+      <Documentation />
       <AuthButtons />
       <Footer />
     </WelcomePageContainer>

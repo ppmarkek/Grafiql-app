@@ -1,9 +1,5 @@
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-//GRAP-52 -->
-// import Header from './components/templates/Header/Header';
-// import InputEntryPoint from './components/atoms/InputEntryPoint/InputEntryPoint';
 import { ValueContext, Langs } from './components/Context/ValueContext';
 import WelcomePage from './pages/WelcomePage';
 import MainPage from './pages/mainPage/MainPage';

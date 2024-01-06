@@ -23,3 +23,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Jest Cache
+jest-cache
+# Jest Test Results
+jest-test-results.json
