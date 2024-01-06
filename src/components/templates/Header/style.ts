@@ -1,6 +1,7 @@
 import { FormControl, Grid, Select, InputLabel } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/system';
+import { PrimaryButton } from '../../buttons/PrimaryButton';
 
 type LinkStyleProps = {
   width?: string;
@@ -23,6 +24,27 @@ export const Wrapper = styled(Grid, {
 }));
 
 export const StyledLink = styled(Link, {
+  shouldForwardProp: (prop) => prop !== 'isSticky',
+})(({ width, isSticky }: LinkStyleProps) => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: width || 'auto',
+  textDecoration: 'none',
+  color: isSticky ? '#000' : '#fff',
+  fontWeight: '700',
+  fontSize: '18px',
+  padding: '10px',
+  borderRadius: '10px',
+  transition: 'all 0.5s',
+
+  '&:hover': {
+    boxShadow:
+      '0 -10px 25px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1)',
+  },
+}));
+
+export const StyledButton = styled(PrimaryButton, {
   shouldForwardProp: (prop) => prop !== 'isSticky',
 })(({ width, isSticky }: LinkStyleProps) => ({
   display: 'flex',

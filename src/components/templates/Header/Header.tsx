@@ -2,14 +2,20 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Grid, MenuItem, SelectChangeEvent } from '@mui/material';
 import { ValueContext, Langs, useI18n } from '../../Context/ValueContext';
 import {
+  StyledButton,
   StyledFormControl,
   StyledInputLabel,
   StyledLink,
   StyledSelect,
   Wrapper,
 } from './style';
+import { useFirebaseAuth } from '../../../services/auth/firebase';
+import { ButtonsContainer } from '../../authButtons/style';
+import { Navigate } from 'react-router-dom';
 
 const Header = () => {
+  const { user, logout } = useFirebaseAuth();
+  console.log(user);
   const [isSticky, setIsSticky] = useState(false);
   const { language, setLanguage } = useContext(ValueContext);
   const i18n = useI18n();
@@ -56,9 +62,20 @@ const Header = () => {
             <MenuItem value={Langs.en}>EN</MenuItem>
           </StyledSelect>
         </StyledFormControl>
-        <StyledLink isSticky={isSticky} width="100px" to={'/signOut'}>
-          {i18n.auth.signOutLink}
-        </StyledLink>
+        {user && (
+          <ButtonsContainer>
+            <StyledButton
+              isSticky={isSticky}
+              width={'100px'}
+              onClick={() => {
+                logout();
+                return <Navigate to="/" replace />;
+              }}
+            >
+              {i18n.auth.signOutLink}
+            </StyledButton>
+          </ButtonsContainer>
+        )}
       </Grid>
     </Wrapper>
   );
