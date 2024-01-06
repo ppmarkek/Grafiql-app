@@ -11,10 +11,11 @@ import {
 } from './style';
 import { useFirebaseAuth } from '../../../services/auth/firebase';
 import { ButtonsContainer } from '../../authButtons/style';
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 const Header = () => {
   const { user, logout } = useFirebaseAuth();
+  const navigate = useNavigate();
   console.log(user);
   const [isSticky, setIsSticky] = useState(false);
   const { language, setLanguage } = useContext(ValueContext);
@@ -69,7 +70,7 @@ const Header = () => {
               width={'100px'}
               onClick={() => {
                 logout();
-                return <Navigate to="/" replace />;
+                navigate('/');
               }}
             >
               {i18n.auth.signOutLink}
