@@ -12,7 +12,7 @@ exports[`Header component becomes sticky on scroll 1`] = `
       href="/"
       width="150px"
     >
-      Welcome page
+      К стартовой странице
     </a>
   </div>
   <div
@@ -22,11 +22,11 @@ exports[`Header component becomes sticky on scroll 1`] = `
       class="MuiFormControl-root css-1325rt7-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1k5x8it-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="demo-simple-select-label"
       >
-        Language
+        Язык
       </label>
       <div
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-18a5grb-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
@@ -41,14 +41,14 @@ exports[`Header component becomes sticky on scroll 1`] = `
           role="combobox"
           tabindex="0"
         >
-          EN
+          RU
         </div>
         <input
           aria-hidden="true"
           aria-invalid="false"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           tabindex="-1"
-          value="en"
+          value="ru"
         />
         <svg
           aria-hidden="true"
@@ -80,7 +80,7 @@ exports[`Header component becomes sticky on scroll 1`] = `
       href="/signOut"
       width="100px"
     >
-      Sign Out
+      Выйти
     </a>
   </div>
 </div>
@@ -99,7 +99,7 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
         href="/"
         width="150px"
       >
-        Welcome page
+        К стартовой странице
       </a>
     </div>
     <div
@@ -109,11 +109,11 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
         class="MuiFormControl-root css-1325rt7-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-782rkc-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="demo-simple-select-label"
         >
-          Language
+          Язык
         </label>
         <div
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl css-1slsstf-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
@@ -128,14 +128,14 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
             role="combobox"
             tabindex="0"
           >
-            EN
+            RU
           </div>
           <input
             aria-hidden="true"
             aria-invalid="false"
             class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
             tabindex="-1"
-            value="en"
+            value="ru"
           />
           <svg
             aria-hidden="true"
@@ -167,7 +167,7 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
         href="/signOut"
         width="100px"
       >
-        Sign Out
+        Выйти
       </a>
     </div>
   </div>

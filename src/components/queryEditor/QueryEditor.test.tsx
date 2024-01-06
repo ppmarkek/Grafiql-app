@@ -9,7 +9,7 @@ test('QueryEditor renders correctly', () => {
 
   render(
     <QueryEditor
-      query={query}
+      value={query}
       onChange={onChangeMock}
       onExecute={onExecuteMock}
     />
@@ -27,7 +27,7 @@ test('QueryEditor calls onChange when text is changed', () => {
 
   render(
     <QueryEditor
-      query={query}
+      value={query}
       onChange={onChangeMock}
       onExecute={onExecuteMock}
     />
@@ -49,7 +49,7 @@ test('QueryEditor calls onExecute when button is clicked', () => {
 
   render(
     <QueryEditor
-      query={query}
+      value={query}
       onChange={onChangeMock}
       onExecute={onExecuteMock}
     />

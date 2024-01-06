@@ -7,6 +7,9 @@ export const Container = styled.div`
 export const ButtonsSection = styled.div`
   background-color: #292929;
   padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;
 
 export const CodeEditor = styled.div`
