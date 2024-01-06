@@ -2,7 +2,7 @@ import { Button, Grid, Input } from '@mui/material';
 import { styled } from '@mui/system';
 
 export const Wrapper = styled(Grid)({
-  height: '5%',
+  height: '30px',
   backgroundColor: 'rgba(0, 0, 0, 0.09)',
   borderTopRightRadius: '5px',
   borderBottomRightRadius: '5px',

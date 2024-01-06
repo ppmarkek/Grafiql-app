@@ -13,6 +13,7 @@ import {
   setEntry,
   useEntrySelector,
 } from '../../services/api/slices/entrySlice';
+import Documentation from '../../components/templates/Documentation/Documentation';
 
 export default function MainPage() {
   const requestBody = useRequestBodySelector();
@@ -49,6 +50,7 @@ export default function MainPage() {
         onChange={handleQueryBodyChange}
         onExecute={handleExecute}
       />
+      <Documentation />
       <JsonViewer />
     </Container>
   );

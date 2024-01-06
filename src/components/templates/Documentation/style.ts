@@ -9,7 +9,6 @@ export const Wrapper = styled(Grid)({
 export const OpenGrid = styled(Grid)({
   height: '100%',
   width: '100%',
-  borderRight: '1px solid #444',
 });
 
 export const OpenButton = styled(Button)(
@@ -24,7 +23,7 @@ export const OpenButton = styled(Button)(
     height: '25px',
     cursor: 'pointer',
     position: 'absolute',
-    left: active ? '387px' : '17px',
+    left: active ? '387px' : '12px',
     transform: active ? 'rotate(0.5turn)' : 'none',
     top: '220px',
     zIndex: '1201',
