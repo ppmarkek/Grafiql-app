@@ -14,7 +14,7 @@ export default function JsonViewer() {
     variables: { body: requestBody.requestBody, url: url.entry || '' },
   });
   return (
-    <CodeEditor>
+    <CodeEditor data-testid="code-editor">
       <MonacoEditor
         language="json"
         theme="vs-dark"
@@ -28,8 +28,14 @@ export default function JsonViewer() {
         }}
       />
       <ButtonsSection>
-        <CopyToClipboard text={'JSON.stringify(data)'}>
-          <CopyButton>
+        <CopyToClipboard
+          text={
+            error
+              ? JSON.stringify(error, null, 2)
+              : JSON.stringify(data, null, 2)
+          }
+        >
+          <CopyButton data-testid="copy-button">
             <ContentCopyIcon fontSize="medium" />
           </CopyButton>
         </CopyToClipboard>
