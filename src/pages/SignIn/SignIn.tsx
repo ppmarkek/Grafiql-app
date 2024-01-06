@@ -3,14 +3,21 @@ import { FormikProps, useFormik } from 'formik';
 import FormInput, { Values } from '../../components/FormInput/FormInput';
 
 import { useFirebaseAuth } from '../../services/auth/firebase';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import GoogleButton from '../../components/GoogleButton/GoogleButton';
 import { useI18n } from '../../components/Context/ValueContext';
+import * as Yup from 'yup';
+
+const SignInSchema = Yup.object().shape({
+  email: Yup.string().email('Invalid email').required('Required'),
+  password: Yup.string().min(8, 'Too Short!').required('Required'),
+});
 
 const SignIn = () => {
   const i18n = useI18n();
-
-  const { user, signInWithGoogle } = useFirebaseAuth();
+  const { user, error, signInWithGoogle, logInWithEmailAndPassword } =
+    useFirebaseAuth();
+  const navigate = useNavigate();
   console.log('user', user);
 
   const formik: FormikProps<Values> = useFormik({
@@ -20,8 +27,10 @@ const SignIn = () => {
       password: '',
       passwordConfirm: '',
     },
+    validationSchema: SignInSchema,
     onSubmit: (values) => {
-      alert(JSON.stringify(values, null, 2));
+      logInWithEmailAndPassword(values.email, values.password);
+      if (user) navigate('/main');
     },
   });
   return (
@@ -56,6 +65,7 @@ const SignIn = () => {
           <List
             sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}
           >
+            {error && <ListItem>{error.code}</ListItem>}
             <ListItem>
               <FormInput
                 title={'email'}

@@ -116,8 +116,6 @@ export function useFirebaseAuth() {
       setState({ loading: false });
     } catch (err) {
       if (err instanceof FirebaseError) {
-        console.error(err);
-        alert(err.message);
         setState({
           error: err,
           loading: false,
@@ -153,8 +151,6 @@ export function useFirebaseAuth() {
       setState({ loading: false });
     } catch (err) {
       if (err instanceof FirebaseError) {
-        console.error(err);
-        alert(err.message);
         setState({
           error: err,
           loading: false,
@@ -185,7 +181,6 @@ export function useFirebaseAuth() {
       setState({ loading: false });
     } catch (err) {
       if (err instanceof FirebaseError) {
-        alert(err.message);
         setState({
           error: err,
           loading: false,
