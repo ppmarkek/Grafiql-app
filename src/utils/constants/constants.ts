@@ -1,4 +1,3 @@
-export const courseLogo = 'https://rs.school/images/rs_school_js.svg';
 export const courseLink = 'https://rs.school/react/';
 
 type Author = {

@@ -7,11 +7,8 @@ import {
   Authors,
   Line,
 } from '../../styles/commonStyles';
-import {
-  courseLogo,
-  courseLink,
-  authorsData,
-} from '../../utils/constants/constants';
+import { courseLink, authorsData } from '../../utils/constants/constants';
+import courseLogo from '../../assets/rs_school_js.svg';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function Footer() {
