@@ -7,7 +7,9 @@ type LinkStyleProps = {
   isSticky?: boolean;
 };
 
-export const Wrapper = styled(Grid)(({ isSticky }: LinkStyleProps) => ({
+export const Wrapper = styled(Grid, {
+  shouldForwardProp: (prop) => prop !== 'isSticky',
+})(({ isSticky }: LinkStyleProps) => ({
   height: isSticky ? '80px' : '90px',
   backgroundColor: isSticky ? '#f0f0f0' : 'transparent',
   borderBottom: isSticky ? 'unset' : '1px solid #444',
@@ -20,28 +22,30 @@ export const Wrapper = styled(Grid)(({ isSticky }: LinkStyleProps) => ({
   transition: 'all 0.5s ease-in-out',
 }));
 
-export const StyledLink = styled(Link)(
-  ({ width, isSticky }: LinkStyleProps) => ({
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    width: width || 'auto',
-    textDecoration: 'none',
-    color: isSticky ? '#000' : '#fff',
-    fontWeight: '700',
-    fontSize: '18px',
-    padding: '10px',
-    borderRadius: '10px',
-    transition: 'all 0.5s',
+export const StyledLink = styled(Link, {
+  shouldForwardProp: (prop) => prop !== 'isSticky',
+})(({ width, isSticky }: LinkStyleProps) => ({
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: width || 'auto',
+  textDecoration: 'none',
+  color: isSticky ? '#000' : '#fff',
+  fontWeight: '700',
+  fontSize: '18px',
+  padding: '10px',
+  borderRadius: '10px',
+  transition: 'all 0.5s',
 
-    '&:hover': {
-      boxShadow:
-        '0 -10px 25px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1)',
-    },
-  })
-);
+  '&:hover': {
+    boxShadow:
+      '0 -10px 25px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.1)',
+  },
+}));
 
-export const StyledFormControl = styled(FormControl)({
+export const StyledFormControl = styled(FormControl, {
+  shouldForwardProp: (prop) => prop !== 'isSticky',
+})({
   width: '130px',
 
   fieldset: {
@@ -49,7 +53,9 @@ export const StyledFormControl = styled(FormControl)({
   },
 });
 
-export const StyledSelect = styled(Select)(({ isSticky }: LinkStyleProps) => ({
+export const StyledSelect = styled(Select, {
+  shouldForwardProp: (prop) => prop !== 'isSticky',
+})(({ isSticky }: LinkStyleProps) => ({
   color: isSticky ? '#000' : '#fff',
 
   label: {
@@ -57,8 +63,8 @@ export const StyledSelect = styled(Select)(({ isSticky }: LinkStyleProps) => ({
   },
 }));
 
-export const StyledInputLabel = styled(InputLabel)(
-  ({ isSticky }: LinkStyleProps) => ({
-    color: isSticky ? '#000' : '#fff',
-  })
-);
+export const StyledInputLabel = styled(InputLabel, {
+  shouldForwardProp: (prop) => prop !== 'isSticky',
+})(({ isSticky }: LinkStyleProps) => ({
+  color: isSticky ? '#000' : '#fff',
+}));

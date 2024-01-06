@@ -1,12 +1,15 @@
 import { Button, Grid, List, ListItem, Paper } from '@mui/material';
 import { FormikProps, useFormik } from 'formik';
 import FormInput, { Values } from '../../components/FormInput/FormInput';
-import i18n from '../SignUp/en.json';
+
 import { useFirebaseAuth } from '../../services/auth/firebase';
 import { Link } from 'react-router-dom';
 import GoogleButton from '../../components/GoogleButton/GoogleButton';
+import { useI18n } from '../../components/Context/ValueContext';
 
 const SignIn = () => {
+  const i18n = useI18n();
+
   const { user, signInWithGoogle } = useFirebaseAuth();
   console.log('user', user);
 
@@ -76,7 +79,7 @@ const SignIn = () => {
               <Grid sx={{ marginRight: '1rem' }}>
                 {i18n.auth.dontHaveAccount}
               </Grid>
-              <Link to={'/'}>{i18n.auth.signUpLink}</Link>
+              <Link to={'/signup'}>{i18n.auth.signUpLink}</Link>
             </ListItem>
           </List>
         </form>

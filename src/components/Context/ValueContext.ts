@@ -1,4 +1,7 @@
-import { Dispatch, SetStateAction, createContext } from 'react';
+import { Dispatch, SetStateAction, createContext, useContext } from 'react';
+
+import en from '../../i18n/en.json';
+import ru from '../../i18n/ru.json';
 
 export enum Langs {
   en = 'en',
@@ -13,10 +16,27 @@ interface ValueContextType {
 }
 
 export const initialState: ValueContextType = {
-  language: Langs.en,
+  language: Langs.ru,
   setLanguage: (() => {}) as Dispatch<SetStateAction<Langs>>,
   inputEntryPoint: '',
   setInputEntryPoint: (() => {}) as Dispatch<SetStateAction<string>>,
 };
 
 export const ValueContext = createContext<ValueContextType>(initialState);
+
+export function useLanguage(): Langs {
+  const { language } = useContext<ValueContextType>(ValueContext);
+
+  return language;
+}
+
+export function useI18n() {
+  const { language } = useContext<ValueContextType>(ValueContext);
+  switch (language) {
+    case 'ru':
+      return ru;
+    default:
+    case 'en':
+      return en;
+  }
+}
