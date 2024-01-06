@@ -37,8 +37,8 @@ interface FirebaseContext {
   error?: FirebaseError;
   firebase: FirebaseApp;
   setState: Dispatch<FirebaseAuthState>;
-  // firstCheck: boolean
 }
+
 const FirebaseContext = createContext<FirebaseContext | null>(null);
 
 const firebaseConfig = {

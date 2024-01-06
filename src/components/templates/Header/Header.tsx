@@ -12,6 +12,7 @@ import {
 import { useFirebaseAuth } from '../../../services/auth/firebase';
 import { ButtonsContainer } from '../../authButtons/style';
 import { useNavigate } from 'react-router';
+import AuthButtons from '../../authButtons/AuthButtons';
 
 const Header = () => {
   const { user, logout } = useFirebaseAuth();
@@ -76,6 +77,7 @@ const Header = () => {
             </StyledButton>
           </ButtonsContainer>
         )}
+        {!user && <AuthButtons />}
       </Grid>
     </Wrapper>
   );
