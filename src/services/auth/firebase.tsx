@@ -166,7 +166,6 @@ export function useFirebaseAuth() {
       const auth = getAuth(firebase);
       setState({ loading: true });
       const res = await signInWithPopup(auth, googleProvider);
-      console.log('res', res);
       const user = res.user;
       const db = getFirestore(firebase);
       const q = query(collection(db, 'users'), where('uid', '==', user.uid));
