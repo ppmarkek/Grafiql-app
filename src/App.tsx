@@ -20,7 +20,7 @@ function App() {
       <ValueContext.Provider
         value={{ language, setLanguage, inputEntryPoint, setInputEntryPoint }}
       >
-        <Router>
+        <Router basename={process.env.VITE_ROUTER_BASEPATH}>
           <Header />
           <Routes>
             <Route path="/" element={<WelcomePage />} />

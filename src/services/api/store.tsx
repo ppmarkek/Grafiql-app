@@ -11,10 +11,21 @@ export const createStore = () =>
       entry: entry.reducer,
       requestBody: requestBody.reducer,
       [api.reducerPath]: api.reducer,
-      // [cardMTGsApi.reducerPath]: cardMTGsApi.reducer,
     },
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware().concat(api.middleware),
+  });
+
+export const setupStore = (preloadedState?: RootState) =>
+  configureStore({
+    reducer: {
+      entry: entry.reducer,
+      requestBody: requestBody.reducer,
+      [api.reducerPath]: api.reducer,
+    },
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(api.middleware),
+    preloadedState,
   });
 
 export type AppDispatch = AppStore['dispatch'];

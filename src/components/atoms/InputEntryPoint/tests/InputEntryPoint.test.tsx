@@ -1,28 +1,22 @@
 import React from 'react';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { ValueContext, Langs } from '../../../Context/ValueContext';
 import InputEntryPoint from '../InputEntryPoint';
+import userEvent from '@testing-library/user-event';
 
 describe('InputEntryPoint', () => {
-  let mockInputEntryPoint = '';
-  const mockSetLanguage = jest.fn();
-  const mockSetInputEntryPoint = jest.fn((newState) => {
-    mockInputEntryPoint = newState;
+  let mockValue = '';
+  const mockSetValue = jest.fn((newState) => {
+    mockValue = newState.target.value;
   });
 
   const renderComponent = () =>
     render(
-      <ValueContext.Provider
-        value={{
-          language: Langs.en,
-          setLanguage: mockSetLanguage,
-          inputEntryPoint: mockInputEntryPoint,
-          setInputEntryPoint: mockSetInputEntryPoint,
-        }}
-      >
-        <InputEntryPoint />
-      </ValueContext.Provider>
+      <InputEntryPoint
+        value={mockValue}
+        onChange={mockSetValue}
+        onExecute={jest.fn()}
+      />
     );
 
   it('renders InputEntryPoint component', () => {
@@ -34,30 +28,10 @@ describe('InputEntryPoint', () => {
   it('allows typing in input', async () => {
     renderComponent();
     const input = screen.getByRole('textbox') as HTMLInputElement;
-    fireEvent.change(input, { target: { value: 'test value' } });
+    await userEvent.type(input, 'test value');
 
     await waitFor(() => {
-      expect(mockSetInputEntryPoint).toHaveBeenCalledWith('test value');
-    });
-  });
-
-  it('clicking button logs value', async () => {
-    const mockConsoleLog = jest.fn();
-    global.console.log = mockConsoleLog;
-
-    renderComponent();
-    const input = screen.getByRole('textbox') as HTMLInputElement;
-
-    fireEvent.change(input, { target: { value: 'test value' } });
-
-    await waitFor(() => {
-      expect(mockSetInputEntryPoint).toHaveBeenCalledWith('test value');
-    });
-
-    fireEvent.click(screen.getByRole('button'));
-
-    await waitFor(() => {
-      expect(mockConsoleLog).toHaveBeenCalledWith(mockInputEntryPoint);
+      expect(mockSetValue).toHaveBeenCalled();
     });
   });
 

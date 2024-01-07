@@ -115,6 +115,7 @@ export function useFirebaseAuth() {
       await signInWithEmailAndPassword(auth, email, password);
       setState({ loading: false });
     } catch (err) {
+      console.error(err);
       if (err instanceof FirebaseError) {
         setState({
           error: err,
@@ -165,7 +166,6 @@ export function useFirebaseAuth() {
       const auth = getAuth(firebase);
       setState({ loading: true });
       const res = await signInWithPopup(auth, googleProvider);
-      console.log('res', res);
       const user = res.user;
       const db = getFirestore(firebase);
       const q = query(collection(db, 'users'), where('uid', '==', user.uid));

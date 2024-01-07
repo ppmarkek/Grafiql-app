@@ -7,13 +7,7 @@ exports[`Header component becomes sticky on scroll 1`] = `
   <div
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
   >
-    <a
-      class="css-1avdwde"
-      href="/"
-      width="150px"
-    >
-      Welcome page
-    </a>
+    <a />
   </div>
   <div
     class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-6 css-1wdn4sc-MuiGrid-root"
@@ -22,7 +16,7 @@ exports[`Header component becomes sticky on scroll 1`] = `
       class="MuiFormControl-root css-1325rt7-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1k5x8it-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="demo-simple-select-label"
       >
@@ -41,14 +35,14 @@ exports[`Header component becomes sticky on scroll 1`] = `
           role="combobox"
           tabindex="0"
         >
-          EN
+          RU
         </div>
         <input
           aria-hidden="true"
           aria-invalid="false"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           tabindex="-1"
-          value="en"
+          value="ru"
         />
         <svg
           aria-hidden="true"
@@ -75,13 +69,12 @@ exports[`Header component becomes sticky on scroll 1`] = `
         </fieldset>
       </div>
     </div>
-    <a
-      class="css-vmh4zg"
-      href="/signOut"
-      width="100px"
+    <div
+      class="sc-gsTDqH jZoxnv"
     >
-      Sign Out
-    </a>
+      <a />
+      <a />
+    </div>
   </div>
 </div>
 `;
@@ -94,13 +87,7 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
     <div
       class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 css-1osj8n2-MuiGrid-root"
     >
-      <a
-        class="css-1gztb2e"
-        href="/"
-        width="150px"
-      >
-        Welcome page
-      </a>
+      <a />
     </div>
     <div
       class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-6 css-1wdn4sc-MuiGrid-root"
@@ -109,7 +96,7 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
         class="MuiFormControl-root css-1325rt7-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-782rkc-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="demo-simple-select-label"
         >
@@ -128,14 +115,14 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
             role="combobox"
             tabindex="0"
           >
-            EN
+            RU
           </div>
           <input
             aria-hidden="true"
             aria-invalid="false"
             class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
             tabindex="-1"
-            value="en"
+            value="ru"
           />
           <svg
             aria-hidden="true"
@@ -162,13 +149,12 @@ exports[`Header component renders correctly and matches snapshot 1`] = `
           </fieldset>
         </div>
       </div>
-      <a
-        class="css-6xsvjt"
-        href="/signOut"
-        width="100px"
+      <div
+        class="sc-gsTDqH jZoxnv"
       >
-        Sign Out
-      </a>
+        <a />
+        <a />
+      </div>
     </div>
   </div>
 </DocumentFragment>

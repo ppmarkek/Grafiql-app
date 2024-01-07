@@ -2,6 +2,21 @@ import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
 import QueryEditor from './QueryEditor';
 
+jest.mock('@monaco-editor/react', () => {
+  const FakeEditor = jest.fn((props) => {
+    return (
+      <textarea
+        data-auto={props.wrapperClassName}
+        data-testid="monaco-editor"
+        onChange={(e) => props.onChange(e.target.value)}
+        onClick={() => props.onExecute()}
+        value={props.value}
+      ></textarea>
+    );
+  });
+  return FakeEditor;
+});
+
 test('QueryEditor renders correctly', () => {
   const query = 'query { hello }';
   const onChangeMock = jest.fn();
@@ -9,15 +24,15 @@ test('QueryEditor renders correctly', () => {
 
   render(
     <QueryEditor
-      query={query}
+      value={query}
       onChange={onChangeMock}
       onExecute={onExecuteMock}
     />
   );
 
-  expect(screen.getByLabelText('Code Editor')).toBeInTheDocument();
+  expect(screen.getByTestId('code-editor')).toBeInTheDocument();
 
-  expect(screen.getByRole('textbox')).toHaveValue(query);
+  expect(screen.getByTestId('monaco-editor')).toHaveValue(query);
 });
 
 test('QueryEditor calls onChange when text is changed', () => {
@@ -27,7 +42,7 @@ test('QueryEditor calls onChange when text is changed', () => {
 
   render(
     <QueryEditor
-      query={query}
+      value={query}
       onChange={onChangeMock}
       onExecute={onExecuteMock}
     />
@@ -49,7 +64,7 @@ test('QueryEditor calls onExecute when button is clicked', () => {
 
   render(
     <QueryEditor
-      query={query}
+      value={query}
       onChange={onChangeMock}
       onExecute={onExecuteMock}
     />

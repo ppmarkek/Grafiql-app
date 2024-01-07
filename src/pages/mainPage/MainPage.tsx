@@ -38,7 +38,7 @@ export default function MainPage() {
   };
 
   return (
-    <Container id="main-page">
+    <Container data-testid="main-page">
       <InputEntryPoint
         value={entryPoint}
         onChange={handleEntryChange}

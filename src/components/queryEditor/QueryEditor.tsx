@@ -11,7 +11,7 @@ interface Props {
 
 export default function QueryEditor({ value, onChange, onExecute }: Props) {
   return (
-    <CodeEditor>
+    <CodeEditor data-testid="code-editor">
       <MonacoEditor
         language="graphql"
         theme="vs-dark"
@@ -22,7 +22,7 @@ export default function QueryEditor({ value, onChange, onExecute }: Props) {
         }}
       />
       <ButtonsSection>
-        <Button onClick={onExecute} id="execute-button">
+        <Button onClick={onExecute} data-testid="execute-button">
           <PlayArrowIcon fontSize="medium" />
         </Button>
       </ButtonsSection>

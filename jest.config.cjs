@@ -22,6 +22,7 @@ module.exports = {
   },
   moduleNameMapper: {
     '\\.css$': 'identity-obj-proxy',
+    '\\.svg': '<rootDir>/mocks/assetsMock.js'
   },
   coveragePathIgnorePatterns: [
     '/src/redux',
@@ -31,5 +32,6 @@ module.exports = {
     'src/fixtures/',
   ],
   testMatch: ['**/__tests__/**/*.ts?(x)', '**/?(*.)+(spec|test).ts?(x)'],
+  testPathIgnorePatterns: ["/node_modules/"],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 };
