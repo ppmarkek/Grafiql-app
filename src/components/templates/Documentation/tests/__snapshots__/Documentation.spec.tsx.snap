@@ -9,7 +9,8 @@ exports[`Documentation Component matches snapshot 1`] = `
       class="MuiGrid-root css-xmbyct-MuiGrid-root"
     >
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1332u5p-MuiButtonBase-root-MuiButton-root"
+        active="false"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1dcekjz-MuiButtonBase-root-MuiButton-root"
         data-testid="open-button"
         tabindex="0"
         type="button"

@@ -20,8 +20,6 @@ const Documentation = () => {
   const [state, setState] = useState(false);
   const [type, setType] = useState('all');
 
-  console.log(language);
-
   return (
     <Wrapper>
       <OpenGrid>
@@ -54,9 +52,12 @@ const Documentation = () => {
             <Grid display={'flex'} flexDirection={'column'} gap={'10px'}>
               <Text variant={'BOLD'}>All Schema Types</Text>
               {AllSchemaTypesEN.map(
-                (value) =>
+                (value, idx) =>
                   value.title !== 'Root' && (
-                    <Grid key={value.title} paddingLeft={'20px'}>
+                    <Grid
+                      key={value.title.concat('0' + idx)}
+                      paddingLeft={'20px'}
+                    >
                       <SchemaTypesButton
                         onClick={() => setType(value.title)}
                         data-testid={'schema-types-button'}
@@ -80,10 +81,10 @@ const Documentation = () => {
             <Text variant={'H4'}>{type}</Text>
 
             {AllSchemaTypesEN.map(
-              (value) =>
+              (value, idx) =>
                 value.title === type && (
                   <div
-                    key={value.title}
+                    key={value.title.concat('0' + idx)}
                     dangerouslySetInnerHTML={{ __html: value.html }}
                   />
                 )
@@ -110,9 +111,12 @@ const Documentation = () => {
             <Grid display={'flex'} flexDirection={'column'} gap={'10px'}>
               <Text variant={'BOLD'}>All Schema Types</Text>
               {AllSchemaTypesRU.map(
-                (value) =>
+                (value, idx) =>
                   value.title !== 'Root' && (
-                    <Grid key={value.title} paddingLeft={'20px'}>
+                    <Grid
+                      key={value.title.concat('0' + idx)}
+                      paddingLeft={'20px'}
+                    >
                       <SchemaTypesButton onClick={() => setType(value.title)}>
                         <Text variant={'REGULAR'}>{value.title}</Text>
                       </SchemaTypesButton>
@@ -133,10 +137,10 @@ const Documentation = () => {
             <Text variant={'H4'}>{type}</Text>
 
             {AllSchemaTypesRU.map(
-              (value) =>
+              (value, idx) =>
                 value.title === type && (
                   <div
-                    key={value.title}
+                    key={value.title.concat('0' + idx)}
                     dangerouslySetInnerHTML={{ __html: value.html }}
                   />
                 )

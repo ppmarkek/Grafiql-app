@@ -115,6 +115,7 @@ export function useFirebaseAuth() {
       await signInWithEmailAndPassword(auth, email, password);
       setState({ loading: false });
     } catch (err) {
+      console.error(err);
       if (err instanceof FirebaseError) {
         setState({
           error: err,

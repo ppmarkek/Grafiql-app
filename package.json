@@ -12,7 +12,8 @@
     "fix": "prettier --write .",
     "preview": "vite preview",
     "prepare": "husky install",
-    "test": "jest --watch --testPathPattern=./src/components",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {

@@ -44,14 +44,14 @@ describe('Documentation Component', () => {
   });
 
   it('applies correct styles when active is true', () => {
-    render(<OpenButton active={true} />);
+    render(<OpenButton active={'true'} />);
     const button = screen.getByRole('button');
     expect(button).toHaveStyle('left: 387px');
     expect(button).toHaveStyle('transform: rotate(0.5turn)');
   });
 
   it('applies correct styles when active is false', () => {
-    render(<OpenButton active={false} />);
+    render(<OpenButton active={''} />);
     const button = screen.getByRole('button');
     const style = window.getComputedStyle(button);
     expect(style.left).toBe('17px');
