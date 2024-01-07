@@ -1,0 +1,28 @@
+{
+	"auth": {
+		"signIn": "Добро пожаловать на GraphQL Proxy!",
+		"signUp": "Регистрация нового пользователя",
+		"name": "Имя",
+		"email": "Электронная почта",
+		"password": "Пароль",
+		"passwordConfirm": "Подтверждение пароля",
+		"buttonName": "Отправить",
+		"googleButton": "Продолжить с Google",
+		"dontHaveAccount": "Нет учетной записи?",
+		"haveAccount": "Есть учетная запись?",
+		"signInLink": "Вход",
+		"signUpLink": "Регистрация",
+		"signOutLink": "Выйти"
+	},
+	"main": {
+		"mainLink": "К главной странице",
+		"language": "Язык"
+	},
+	"welcome": {
+		"welcomeLink": "К стартовой странице",
+		"welcomeText": "ДратуТи!!!!",
+		"projectText": "Что-то про проект",
+		"developersText": "что-то от разработчиков",
+		"courseText": "и чуть-чуть о курсе"
+	}
+}
