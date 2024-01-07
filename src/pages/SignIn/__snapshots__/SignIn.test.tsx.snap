@@ -7,9 +7,41 @@ exports[`SignIn should render without errors 1`] = `
   <div
     className="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation3 css-dfu1h7-MuiPaper-root"
   >
-    <h1>
-      SignIn
-    </h1>
+    <h2>
+      Welcome back to GraphQL Proxy!
+    </h2>
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium css-1hyafms-MuiButtonBase-root-MuiButton-root"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[MockFunction]}
+      onContextMenu={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <img
+        alt="Google logo"
+        className="logo"
+        src="svg"
+        style={
+          {
+            "height": "1.5rem",
+            "marginRight": "1rem",
+          }
+        }
+      />
+      Continue with Google
+    </button>
     <form
       onSubmit={[Function]}
     >
@@ -134,6 +166,17 @@ exports[`SignIn should render without errors 1`] = `
           >
             Submit
           </button>
+        </li>
+        <li
+          className="MuiListItem-root MuiListItem-gutters MuiListItem-padding css-1p823my-MuiListItem-root"
+          disabled={false}
+        >
+          <div
+            className="MuiGrid-root css-1w9fng9-MuiGrid-root"
+          >
+            Don't have account?
+          </div>
+          <a />
         </li>
       </ul>
     </form>

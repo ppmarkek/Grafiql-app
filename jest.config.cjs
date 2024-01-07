@@ -22,6 +22,7 @@ module.exports = {
   },
   moduleNameMapper: {
     '\\.css$': 'identity-obj-proxy',
+    '\\.svg': '<rootDir>/mocks/assetsMock.js'
   },
   coveragePathIgnorePatterns: [
     '/src/redux',
