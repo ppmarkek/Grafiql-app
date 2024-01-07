@@ -11,7 +11,11 @@ interface Props {
 const InputEntryPoint = ({ value, onChange, onExecute }: Props) => {
   return (
     <Wrapper container item xs={6}>
-      <StyledInput value={value} onChange={onChange} />
+      <StyledInput
+        data-testid="input-entry-point"
+        value={value}
+        onChange={onChange}
+      />
       <ButtonStart onClick={onExecute}>
         <PlayArrowIcon />
       </ButtonStart>

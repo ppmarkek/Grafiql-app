@@ -7,11 +7,12 @@ exports[`InputEntryPoint matches snapshot 1`] = `
   >
     <div
       class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary css-16p9zmh-MuiInputBase-root-MuiInput-root"
+      data-testid="input-entry-point"
     >
       <input
         class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
         type="text"
-        value=""
+        value="e"
       />
     </div>
     <button
